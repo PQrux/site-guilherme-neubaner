@@ -42,8 +42,6 @@ declare global{
 declare module '@emotion/react' {
   export interface Theme{
     colors: ThemeConfig;
-    lighterShade: ShadedColors;
-    darkerShade: ShadedColors;
     breakpoints: Breakpoints;
   }
 }
