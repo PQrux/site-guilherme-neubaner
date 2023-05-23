@@ -1,8 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
-import React from "react";
-import DarkTheme from "../../themes/dark";
 import "@fontsource/inter";
+import React from "react";
 import GlobalStyles from "../../components/global_styles";
+import DarkTheme from "../../themes/dark";
 
 export default function RootLayout({children}: React.PropsWithChildren){
     return (

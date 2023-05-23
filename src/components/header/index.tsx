@@ -1,14 +1,13 @@
 import styled from "@emotion/styled";
+import { Fragment, useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 import Logo from "../../assets/logo.svg";
 import useBreakpoints from "../../utils/use_breakpoints";
 import Flex from "../flex";
+import Icon from "../icon";
 import Link from "../link";
 import Text from "../text";
-import { MdClose, MdMenu } from "react-icons/md";
-import Icon from "../icon";
-import { useInView } from "react-intersection-observer";
-import { Fragment, useState } from "react";
-import Touchable from "../touchable";
 
 const Container = styled(Flex)(() => ({
     height: '50px',

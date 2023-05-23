@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import Touchable from "../touchable";
 
-const _Button = styled(Touchable)({});
+const _Button = styled(Touchable)({
+    fontFamily: 'Inter'
+});
 
 export default function Button(props: HTMLProps<HTMLButtonElement>){
     return (

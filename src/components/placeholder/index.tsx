@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
 
 const Placeholder = styled.div<{size?: number}>(({size}) =>({
     backgroundColor: '#FF0000',

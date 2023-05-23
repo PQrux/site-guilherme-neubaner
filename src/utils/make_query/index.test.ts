@@ -1,4 +1,4 @@
-import makeQuery from "."
+import makeQuery from ".";
 
 it('should return the query accordingly to the input', () => {
     const qr = makeQuery(720);

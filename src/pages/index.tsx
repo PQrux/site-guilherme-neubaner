@@ -1,16 +1,31 @@
-import Container from "../components/container";
-import RootLayout from "../layouts/root_layout";
-import Text from "../components/text";
-import Em from "../components/em";
-import Logo from "../images/logo.svg";
-import Home from "../sections/home";
+import { graphql } from "gatsby";
 import Header from "../components/header";
+import RootLayout from "../layouts/root_layout";
+import About from "../sections/about";
+import Home from "../sections/home";
 
 export default function Index(){
     return (
-        <RootLayout>
+        <RootLayout>   
             <Header/>
             <Home/>
+            <About/>
         </RootLayout>
     )
 }
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: { language: { eq: $language } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

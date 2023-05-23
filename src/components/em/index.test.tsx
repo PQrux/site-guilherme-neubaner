@@ -1,6 +1,5 @@
 import Em from ".";
 import appSkeleton from "../../../__mocks__/examples/app_skeleton";
-import React from 'react';
 
 const init = (props?: any) => appSkeleton(<Em {...props}>Em</Em>);
 

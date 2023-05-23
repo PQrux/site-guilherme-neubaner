@@ -1,7 +1,7 @@
-import { ThemeProvider } from "@emotion/react"
-import { render } from "@testing-library/react"
-import ExampleTheme from "../theme";
+import { ThemeProvider } from "@emotion/react";
+import { render } from "@testing-library/react";
 import React from 'react';
+import ExampleTheme from "../theme";
 
 function SkeletonComponent({children}: React.PropsWithChildren){
     return (
