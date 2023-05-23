@@ -1,0 +1,9 @@
+{
+    "social_media":{
+        "mail": "Mail",
+        "linkedin": "LinkedIn",
+        "whatsapp": "WhatsApp",
+        "github": "GitHub",
+        "phone": "Telefone"
+    }
+}

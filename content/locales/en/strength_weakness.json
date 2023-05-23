@@ -1,0 +1,30 @@
+{
+  "title": "Pontos <1>fortes</1> e <1>Fracos</1>",
+  "list": [
+    {
+      "name": "Raciocínio lógico",
+      "type": "strength",
+      "description": "Tenho facilidade em lidar com problemas complexos."
+    },
+    {
+      "name": "Planejamento",
+      "type": "strength",
+      "description": "Sou capaz de compreender e planejar fluxos e sistemas complexos."
+    },
+    {
+      "name": "Bom ouvinte",
+      "type": "strength",
+      "description": "Tenho facilidade em entender os problemas do cliente e propor as melhores soluções."
+    },
+    {
+      "name": "Design e UX",
+      "type": "weakness",
+      "description": "Costumo ter dificuldade em criar designs bonitos, costumo desenvolver sistemas minimalistas e mais focados em funcionalidade que em aparência."
+    },
+    {
+      "name": "Gerenciamento de prioridades e tempo",
+      "type": "weakness",
+      "description": "Às vezes posso tomar decisões erradas sobre em que focar e quando focar."
+    }
+  ]
+}
