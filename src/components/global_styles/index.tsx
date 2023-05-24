@@ -4,7 +4,7 @@ export default function GlobalStyles(){
     const theme = useTheme();
     return <Global styles={css({
         'body':{
-            fontFamily: 'Inter',
+            fontFamily: theme.fontFamily,
             margin: 0,
             backgroundColor: theme.colors.bgPrimary,
             color: theme.colors.text,

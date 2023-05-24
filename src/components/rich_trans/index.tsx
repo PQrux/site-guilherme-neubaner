@@ -4,7 +4,7 @@ import Em from "../em";
 export default function RichTrans(props: TransProps<any, string>){
     return (
         <Trans {...props}>
-            .<Em/>.<b/>.
+            .<Em/>.<b/>.<u/>.
         </Trans>
     )
 }
