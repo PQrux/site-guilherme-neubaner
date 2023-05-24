@@ -1,5 +1,7 @@
 {
-  "title": "Pontos <1>fortes</1> e <1>Fracos</1>",
+  "title": "Pontos <1>Fortes</1> e <1>Fracos</1>",
+  "strength_title": "Pontos Fortes",
+  "weakness_title": "Pontos Fracos",
   "list": [
     {
       "name": "Raciocínio lógico",

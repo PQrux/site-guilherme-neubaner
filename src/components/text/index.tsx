@@ -1,6 +1,14 @@
 import styled from "@emotion/styled";
 import DefineDefaultColor from "../../utils/define_default_color";
 
+
+export interface TextProps {
+    size?: keyof typeof sizes;
+    align?: 'center' | 'right' | 'left' | 'justify';
+    color?: ColorType;
+    children?: any;
+}
+
 const sizes = {
     small: '0.90rem',
     normal: '1rem',
@@ -10,11 +18,7 @@ const sizes = {
     xxxLarge: '2.5rem'
 }
 
-const Text = styled.span<{
-    size?: keyof typeof sizes,
-    align?: 'center' | 'right' | 'left' | 'justify',
-    color?: ColorType, 
-}>(({theme, ...props}) => ({
+const Text = styled.span<TextProps>(({theme, ...props}) => ({
     color: DefineDefaultColor(theme, props.color, 'text'),
     fontSize: props.size ? sizes[props.size] : sizes.normal,
     textAlign: props.align ?? undefined,

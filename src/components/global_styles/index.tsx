@@ -10,7 +10,8 @@ export default function GlobalStyles(){
             color: theme.colors.text,
         },
         '*': {
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            whiteSpace: 'pre-line'
         }
     })}/>
 }
