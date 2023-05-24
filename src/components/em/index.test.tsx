@@ -1,7 +1,7 @@
 import Em from ".";
-import appSkeleton from "../../../__mocks__/examples/app_skeleton";
+import { appSkeletonRender } from "../../../__mocks__/examples/app_skeleton";
 
-const init = (props?: any) => appSkeleton(<Em {...props}>Em</Em>);
+const init = (props?: any) => appSkeletonRender(Em, {...props, children: 'Em'});
 
 it('should be an em tag', () => {
     const screen = init();

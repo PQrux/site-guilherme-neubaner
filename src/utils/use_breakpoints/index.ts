@@ -1,9 +1,10 @@
-import breakpoints from "../../configs/breakpoints";
+import { useTheme } from "@emotion/react";
 import useMatchMedia from "../use_match_media";
 
 
 export default function useBreakpoints(breakpoint: keyof BreakpointNumbers){
-    const v = breakpoints[breakpoint];
+    const theme = useTheme();
+    const v = theme.breakpoints[breakpoint];
     const matches = useMatchMedia({query: `(min-width: ${v}px)`});
     return matches;
 }

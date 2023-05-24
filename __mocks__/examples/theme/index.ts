@@ -9,6 +9,7 @@ const brk = {
 }
 
 const ExampleTheme: Theme = {
+    fontFamily: 'Arial',
     colors: {
         primary: '#0085FF',
         text: '#FFF',

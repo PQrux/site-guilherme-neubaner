@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export interface useMatchMediaProps{
+    /**The query string. */
     query: string;
 }
 
