@@ -1,9 +1,10 @@
 {
   "title": "Projetos",
+  "description": "Conheça alguns dos projetos em que eu participei.",
   "list": [
     {
       "name": "Super DASChecker",
-      "image": "../../images/superdaschecker-logo.png",
+      "image": "superdaschecker-logo.png",
       "stack": [
         "ReactJS",
         "NodeJS",
@@ -23,7 +24,7 @@
     },
     {
       "name": "iONO App",
-      "image": "../../images/iono-logo.png",
+      "image": "iono-logo.png",
       "stack": [
         "ReactJS",
         "React Native",
@@ -44,7 +45,7 @@
     },
     {
       "name": "Sagittarius ERP",
-      "image": "../../images/sagittarius-erp-logo.svg",
+      "image": "sagittarius-erp-logo.svg",
       "stack": [
         "ReactJS",
         "NodeJS",
@@ -64,7 +65,7 @@
     },
     {
       "name": "S2 Photobook",
-      "image": "../../images/s2-photobook-logo.svg",
+      "image": "s2-photobook-logo.svg",
       "stack": [
         "ReactJS",
         "Firebase"
@@ -87,7 +88,7 @@
     },
     {
       "name": "S2N NFSe",
-      "image": "../../images/s2n-nfse-logo.png",
+      "image": "s2n-nfse-logo.png",
       "stack": [
         ".NET",
         "GCP - Cloud Run"
@@ -102,7 +103,7 @@
     },
     {
       "name": "Simple PIX",
-      "image": "../../images/simple-pix-logo.svg",
+      "image": "simple-pix-logo.svg",
       "stack": [
         "Open Source",
         "Library",
@@ -112,7 +113,7 @@
     },
     {
       "name": "Liquid ODM",
-      "image": "../../images/liquid-odm-logo.svg",
+      "image": "liquid-odm-logo.svg",
       "stack": [
         "Open Source",
         "Library",
@@ -122,7 +123,7 @@
     },
     {
       "name": "Minha Palestra",
-      "image": "../../images/minha-palestra-logo.png",
+      "image": "minha-palestra-logo.png",
       "stack": [
         "Open Source",
         "ReactJS",

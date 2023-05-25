@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { navigate } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import _Logo from "../../assets/logo.svg";
 import Button from "../../components/button";
@@ -56,11 +57,13 @@ export default function Home(){
                         </Chip>
                     ))}
                 </ChipContainer>
-                <Button>
-                    <Text>
-                        <RichTrans ns="home" i18nKey="about_button"/>
-                    </Text>
-                </Button>
+                <Flex justify="center">
+                    <Button style={{flexBasis: '250px'}} onClick={() => navigate('#about')}>
+                        <Text>
+                            <RichTrans ns="home" i18nKey="about_button"/>
+                        </Text>
+                    </Button>
+                </Flex>
             </Flex>
         </Container>
     )
