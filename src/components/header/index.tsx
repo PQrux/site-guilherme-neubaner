@@ -38,7 +38,7 @@ const ObserverRef = styled.div(() => ({
     top: '0', 
     left: '0', 
     position: 'absolute', 
-    height: '10px', 
+    height: '50px', 
     width: '10px'
 }));
 
@@ -75,18 +75,18 @@ export default function Header(){
     })
 
     const links = [
-        {label: 'INÍCIO', to: '#'},
-        {label: 'SOBRE MIM', to: '#'},
-        {label: 'STACK', to: '#'},
-        {label: 'PROJETOS', to: '#'},
-        {label: 'CONTATO', to: '#'},
+        {label: 'INÍCIO', to: '#home'},
+        {label: 'SOBRE MIM', to: '#about'},
+        {label: 'STACK', to: '#stack'},
+        {label: 'PROJETOS', to: '#projects'},
+        {label: 'CONTATO', to: '#contact'},
     ]
 
     return (
         <Fragment>
             <ObserverRef ref={observer.ref}/>
             <Drawer/>
-            <Container as="header"  className={!observer.inView ? 'sticked' : undefined}>
+            <Container as="header" className={!observer.inView && observer[2] ? 'sticked' : undefined}>
                 
                 <Logo height="70%" className="tophided"/>
                 <div style={{flex: 1}}/>

@@ -12,6 +12,16 @@
             "webRoot": "${workspaceFolder}"
         },
         {
+          "name": "Gatsby develop",
+          "type": "node",
+          "runtimeExecutable": "/home/gui/.nvm/versions/node/v19.6.0/bin/node",
+          "request": "launch",
+          "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+          "args": ["develop"],
+          "stopOnEntry": false,
+          "sourceMaps": false
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Jest: current file",
