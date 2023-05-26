@@ -1,8 +1,11 @@
 import { graphql } from "gatsby";
+import { DynamicImgProvider } from "../components/dynamic_img/provider";
 import Header from "../components/header";
 import SwapLang from "../components/swap_lang";
 import RootLayout from "../layouts/root_layout";
 import About from "../sections/about";
+import Contact from "../sections/contact";
+import Footer from "../sections/footer";
 import Home from "../sections/home";
 import Projects from "../sections/projects";
 import Stack from "../sections/stack";
@@ -10,20 +13,26 @@ import Stack from "../sections/stack";
 export default function Index(){
     return (
         <RootLayout>
+          <DynamicImgProvider>
             <Header/>
             <SwapLang/>
             <section id="home">
-              <Home/>
+              <Home bgcolor="bgPrimary"/>
             </section>
             <section id="about">
-              <About/>
+              <About bgcolor="bgSecondary"/>
             </section>
             <section id="stack">
-              <Stack/>
+              <Stack bgcolor="bgPrimary"/>
             </section>
             <section id="projects">
-              <Projects/>
+              <Projects bgcolor="bgSecondary"/>
             </section>
+            <section id="contact">
+              <Contact bgcolor="bgPrimary"/>
+            </section>
+            <Footer bgcolor="bgSecondary"/>
+          </DynamicImgProvider>
         </RootLayout>
     )
 }

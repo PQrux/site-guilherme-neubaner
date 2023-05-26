@@ -2,6 +2,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { IoIosSchool } from "react-icons/io";
 import Chip from "../../components/chip";
 import Container from "../../components/container";
+import { DynamicImg } from "../../components/dynamic_img";
 import Flex from "../../components/flex";
 import Icon from "../../components/icon";
 import InfoItem from "../../components/info_item";
@@ -11,7 +12,7 @@ import Text from "../../components/text";
 import Title from "../../components/title";
 import useBreakpoints from "../../utils/use_breakpoints";
 
-export default function About(){
+export default function About(props: {bgcolor: ColorType}){
     const formation = useTranslation('formation');
     const experience = useTranslation('experience');
     const strengthWeakness = useTranslation('strength_weakness');
@@ -23,30 +24,37 @@ export default function About(){
     const swList: {name: string, type: string, description: string}[] = strengthWeakness.t<any, any>('list');
 
     return (
-        <Container bgcolor="bgSecondary" fullHeight>
-            <Title>
-                <RichTrans ns="about" i18nKey="title"/>
-            </Title>
-            <Text as='p'>
-                <RichTrans ns="about" i18nKey="content"/>
-            </Text>
+        <Container bgcolor={props.bgcolor} fullHeight>
+            <Flex direction={laptop ? 'row' : 'column'}>
+                <Flex direction="column">
+                    <Title>
+                        <RichTrans ns="about" i18nKey="title"/>
+                    </Title>
+                    <Text as='p' style={{flex: 1}}>
+                        <RichTrans ns="about" i18nKey="content"/>
+                    </Text>
+                </Flex>
+                <DynamicImg src="me2.jpg" alt="Guilherme Neubaner" style={{width: 450, maxWidth: '100%', alignSelf: 'center'}}/>
+            </Flex>
             <Flex style={{marginTop: '40px'}} direction={laptop ? 'row' : 'column'}>
-                <Flex flex={1} direction="column" gap="5px">
+                <Flex flex={1} direction="column">
                     <Subtitle>
                         <RichTrans ns="formation" i18nKey="title"/>
                     </Subtitle>
-                    {formationList.map((f,i) => (
-                        <InfoItem
-                            key={i}
-                            icon={(
-                                <Icon color="primary">
-                                    <IoIosSchool/>
-                                </Icon>
-                            )}
-                            label={f.college}
-                            value={`${f.course} | ${f.period}`}
-                        />
-                    ))}
+                    <Flex direction="column" gap="10px">
+                        {formationList.map((f,i) => (
+                            <InfoItem
+                                key={i}
+                                icon={(
+                                    <Icon color="primary">
+                                        <IoIosSchool/>
+                                    </Icon>
+                                )}
+                                label={f.college}
+                                value={`${f.course} | ${f.period}`}
+                            />
+                        ))}
+                    </Flex>
                 </Flex>
                 <Flex flex={1} direction="column">
                     <Subtitle>
@@ -75,27 +83,27 @@ export default function About(){
                     <Chip style={{alignSelf: "flex-start"}}>
                         <RichTrans ns="strength_weakness" i18nKey="strength_title"/>
                     </Chip>
-                    <ul>
+                    <Flex direction="column" as="ul" gap="10px">
                         {swList.filter(item => item.type === 'strength').map(item => (
                             <li>
                                 <Text color="primary">{item.name}:&nbsp;</Text>
                                 <Text>{item.description}</Text>
                             </li>
                         ))}
-                    </ul>
+                    </Flex>
                 </Flex>
                 <Flex flex={1} direction="column">
                     <Chip color="error" style={{alignSelf: "flex-start"}}>
                         <RichTrans ns="strength_weakness" i18nKey="weakness_title"/>
                     </Chip>
-                    <ul>
-                        {swList.filter(item => item.type === 'strength').map(item => (
+                    <Flex direction="column" as="ul" gap="10px">
+                        {swList.filter(item => item.type === 'weakness').map(item => (
                             <li>
                                 <Text color="primary">{item.name}:&nbsp;</Text>
                                 <Text>{item.description}</Text>
                             </li>
                         ))}
-                    </ul>
+                    </Flex>
                 </Flex>
             </Flex>
         </Container>
