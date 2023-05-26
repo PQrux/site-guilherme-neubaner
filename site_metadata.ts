@@ -1,6 +1,6 @@
 const SiteMetadata = {
-    title: `Guilherme Neubaner`,
-    siteUrl: `https://neubaner.com`,
+    title: `Guilherme Neubaner - Full Cycle Developer`,
+    siteUrl: `https://neubaner.com`
 }
 
 export default SiteMetadata;
