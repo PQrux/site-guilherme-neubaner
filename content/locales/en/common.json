@@ -1,9 +1,38 @@
 {
+    "sitename": "Guilherme Neubaner",
+    "copyright": "All rights reserved.",
+    "sections": [
+        {"label": "HOME", "to": "#home"},
+        {"label": "ABOUT ME", "to": "#about"},
+        {"label": "STACK", "to": "#stack"},
+        {"label": "PROJECTS", "to": "#projects"},
+        {"label": "GET IN TOUCH", "to": "#contact"}
+    ],
     "social_media":{
-        "mail": "Mail",
-        "linkedin": "LinkedIn",
-        "whatsapp": "WhatsApp",
-        "github": "GitHub",
-        "phone": "Telefone"
+        "mail": {
+            "label": "E-mail",
+            "prettyValue": "neubaner.guilherme@gmail.com",
+            "url": "mailto:neubaner.guilherme@gmail.com"
+        },
+        "linkedin": {
+            "label": "LinkedIn",
+            "prettyValue": "@guilherme-neubaner",
+            "url": "https://www.linkedin.com/in/guilherme-neubaner"
+        },
+        "github": {
+            "label": "GitHub",
+            "prettyValue": "github.com/pqrux",
+            "url": "https://github.com/pqrux"
+        },
+        "whatsapp": {
+            "label": "WhatsApp",
+            "prettyValue": "(31) 9 7192-7278",
+            "url": "https://wa.me/5531971927278"
+        },
+        "phone": {
+            "label": "Phone",
+            "prettyValue": "(31) 9 7192-7278",
+            "url": "tel:+5531971927278"
+        }
     }
 }

@@ -1,12 +1,12 @@
 {
   "title": "<1>Stack</1>",
-  "description": "Sou adepto de metodologias de desenvolvimento ágil que produzam soluções de baixo custo e alta performance.\nPor pensar dessa forma adoto tecnologias que garantam essas características no desenvolvimento sem sacrificar a qualidade e estabilidade do serviço.\nAlém disso, minha stack é focada em Javascript/Typescript e Docker o que reduz a curva de aprendizagem da equipe e facilita a configuração do ambiente de trabalho.",
+  "description": "Sou entusiasta de metodologias de desenvolvimento ágil que produzam soluções de baixo custo e alta performance.\n\nPor pensar dessa forma adoto tecnologias que garantam essas características no desenvolvimento sem sacrificar a qualidade e estabilidade do serviço.\n\nAlém disso, minha stack é focada em Javascript/Typescript e Docker o que reduz a curva de aprendizagem da equipe e facilita a configuração do ambiente de trabalho.",
   "list": [
     {
       "level": "Expert",
       "image": "node-logo.svg",
       "name": "NodeJS",
-      "description": "Projetos de backend e microsserviços."
+      "description": "Projetos de back-end e microsserviços."
     },
     {
       "level": "Expert",

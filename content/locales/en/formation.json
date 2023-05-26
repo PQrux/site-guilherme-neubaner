@@ -1,15 +1,15 @@
 {
-  "title": "Formação",
+  "title": "Education",
   "list": [
     {
-      "course": "Análise e Desenvolvimento de Sistemas",
+      "course": "System Analysis and Development",
       "college": "Faculdade de Ciências Sociais Aplicadas de Belo Horizonte",
-      "period": "07/2020"
+      "period": "July 2020"
     },
     {
-      "course": "Técnico em Redes de Computadores",
+      "course": "Technical Course in Computer Networks",
       "college": "SENAI Prof. Vicente Amato",
-      "period": "12/2017"
+      "period": "Dec. 2017"
     }
   ]
 }

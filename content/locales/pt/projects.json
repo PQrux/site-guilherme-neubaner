@@ -1,5 +1,6 @@
 {
   "title": "Projetos",
+  "description": "Conheça alguns dos projetos em que eu participei.",
   "list": [
     {
       "name": "Super DASChecker",
@@ -13,11 +14,11 @@
       "properties": [
         {
           "label": "Custo Anual",
-          "value": "$ 150.00"
+          "value": "R$ 700,00"
         },
         {
-          "label": "Usuários",
-          "value": "600/dia"
+          "label": "Receita Anual Aprox.",
+          "value": "$ 100.000,00"
         }
       ]
     },
@@ -34,11 +35,11 @@
       "properties": [
         {
           "label": "Custo Anual",
-          "value": "$ 10.00/por associação"
+          "value": "R$ 150,00"
         },
         {
           "label": "Usuários",
-          "value": "1000/por associação"
+          "value": "2000/dia"
         }
       ]
     },
@@ -50,11 +51,11 @@
         "NodeJS",
         "Firebase"
       ],
-      "description": "ERP e ponto de venda PWA para varejistas.",
+      "description": "ERP orientado à dispositivos móveis para varejistas com alta rotatividade de colaboradores, facilidade de treinamento e uso são seus diferenciais de mercado.",
       "properties": [
         {
           "label": "Custo Anual",
-          "value": "$ 5.00/por loja"
+          "value": "R$ 10,00/empresa"
         },
         {
           "label": "Usuários",
@@ -69,19 +70,19 @@
         "ReactJS",
         "Firebase"
       ],
-      "description": "Álbum em tempo real para eventos como casamentos, aniversários e etc.",
+      "description": "Álbum em tempo real e público para eventos sociais como casamentos e aniversários.",
       "properties": [
         {
-          "label": "Tempo de desenvolvimento",
+          "label": "Desenvolvimento",
           "value": "2 semanas"
         },
         {
           "label": "Custo Anual",
-          "value": "$ 0.00"
+          "value": "R$ 0,00"
         },
         {
           "label": "Usuários",
-          "value": "30-100/Evento"
+          "value": "~100/Evento"
         }
       ]
     },
@@ -96,7 +97,11 @@
       "properties": [
         {
           "label": "Custo Anual",
-          "value": "$ 0.00"
+          "value": "R$ 0,00"
+        },
+        {
+          "label": "Notas Emitidas",
+          "value": "+ 35.462"
         }
       ]
     },

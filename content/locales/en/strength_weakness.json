@@ -1,32 +1,32 @@
 {
-  "title": "Pontos <1>Fortes</1> e <1>Fracos</1>",
-  "strength_title": "Pontos Fortes",
-  "weakness_title": "Pontos Fracos",
+  "title": "Strengths and Weaknesses",
+  "strength_title": "Strengths",
+  "weakness_title": "Weaknesses",
   "list": [
     {
-      "name": "Raciocínio lógico",
+      "name": "Logical reasoning",
       "type": "strength",
-      "description": "Tenho facilidade em lidar com problemas complexos."
+      "description": "I find it easy to deal with complex problems."
     },
     {
-      "name": "Planejamento",
+      "name": "Planning",
       "type": "strength",
-      "description": "Sou capaz de compreender e planejar fluxos e sistemas complexos."
+      "description": "I'm able to understand and plan complex flows and systems."
     },
     {
-      "name": "Bom ouvinte",
+      "name": "Good Listener",
       "type": "strength",
-      "description": "Tenho facilidade em entender os problemas do cliente e propor as melhores soluções."
+      "description": "I find it easy to understand customer problems and propose the best solutions."
     },
     {
-      "name": "Design e UX",
+      "name": "Design & UX",
       "type": "weakness",
-      "description": "Costumo ter dificuldade em criar designs bonitos, costumo desenvolver sistemas minimalistas e mais focados em funcionalidade que em aparência."
+      "description": "I have difficulty creating beautiful designs, I tend to develop minimalist systems more focused on functionality than appearance."
     },
     {
-      "name": "Gerenciamento de prioridades e tempo",
+      "name": "Time and Priorities Management",
       "type": "weakness",
-      "description": "Às vezes posso tomar decisões erradas sobre em que focar e quando focar."
+      "description": "Sometimes I can take wrong decisions about what task should be delivered first and how much time I would really take on it."
     }
   ]
 }

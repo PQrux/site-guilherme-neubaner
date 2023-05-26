@@ -1,6 +1,6 @@
 {
-  "title": "Projetos",
-  "description": "Conheça alguns dos projetos em que eu participei.",
+  "title": "Projects",
+  "description": "Check out some of the projects I've worked at.",
   "list": [
     {
       "name": "Super DASChecker",
@@ -10,15 +10,15 @@
         "NodeJS",
         "Firebase"
       ],
-      "description": "Sistema completo de gestão e operação para empresas de auditoria tributária, com soluções para automação de serviços e geração de contratos digitais.",
+      "description": "Management and analysis system for tax auditing companies, with solutions for automating services and generating digital contracts.",
       "properties": [
         {
-          "label": "Custo Anual",
-          "value": "$ 150.00"
+          "label": "Yearly Cost",
+          "value": "$ 150,00"
         },
         {
-          "label": "Usuários",
-          "value": "600/dia"
+          "label": "Aprox. Yearly Revenue",
+          "value": "$ 24,000.00"
         }
       ]
     },
@@ -31,15 +31,15 @@
         "NodeJS",
         "Firebase"
       ],
-      "description": "Solução White-label para associações veículares com sistema de gestão e aplicativo de autocontratação, controle e indicação para associados.",
+      "description": "White-label solution for car insurance companies with a management system and application for auto-subscription, controlling and referring clients.",
       "properties": [
         {
-          "label": "Custo Anual",
-          "value": "$ 10.00/por associação"
+          "label": "Yearly Cost",
+          "value": "$ 30,00"
         },
         {
-          "label": "Usuários",
-          "value": "1000/por associação"
+          "label": "Users",
+          "value": "2000/day"
         }
       ]
     },
@@ -51,15 +51,15 @@
         "NodeJS",
         "Firebase"
       ],
-      "description": "ERP e ponto de venda PWA para varejistas.",
+      "description": "Mobile-oriented ERP for retailers with high employee turnover, ease of use and training are its differentials.",
       "properties": [
         {
-          "label": "Custo Anual",
-          "value": "$ 5.00/por loja"
+          "label": "Yearly Cost",
+          "value": "$ 2.00/company"
         },
         {
-          "label": "Usuários",
-          "value": "300/dia"
+          "label": "Users",
+          "value": "300/day"
         }
       ]
     },
@@ -70,19 +70,19 @@
         "ReactJS",
         "Firebase"
       ],
-      "description": "Álbum em tempo real para eventos como casamentos, aniversários e etc.",
+      "description": "Public real-time photo album for social events like weddings and birthdays.",
       "properties": [
         {
-          "label": "Tempo de desenvolvimento",
-          "value": "2 semanas"
+          "label": "Development",
+          "value": "2 weeks"
         },
         {
-          "label": "Custo Anual",
+          "label": "Yearly Cost",
           "value": "$ 0.00"
         },
         {
-          "label": "Usuários",
-          "value": "30-100/Evento"
+          "label": "Users",
+          "value": "~100/event"
         }
       ]
     },
@@ -93,11 +93,15 @@
         ".NET",
         "GCP - Cloud Run"
       ],
-      "description": "Microsserviço para emissão de notas fiscais de serviço em todo território brasileiro.",
+      "description": "Microservice for issuing invoices throughout the Brazilian territory.",
       "properties": [
         {
-          "label": "Custo Anual",
+          "label": "Yearly Cost",
           "value": "$ 0.00"
+        },
+        {
+          "label": "Issued invoices",
+          "value": "+ 35,462"
         }
       ]
     },
@@ -109,7 +113,7 @@
         "Library",
         "Typescript"
       ],
-      "description": "Biblioteca para a geração de PIX Copia/Cola e QR Code."
+      "description": "Library for generating the brazilian PIX Copy/Paste and QR Code."
     },
     {
       "name": "Liquid ODM",
@@ -119,7 +123,7 @@
         "Library",
         "Typescript"
       ],
-      "description": "ODM genérico para base de dados NoSQL, focado principalmente nas tecnologias propostas pelo projeto firebase como Realtime Database e Cloud Firestore."
+      "description": "Generic ODM for NoSQL database, mainly focused on the technologies proposed by the firebase project such as Realtime Database and Cloud Firestore."
     },
     {
       "name": "Minha Palestra",
@@ -129,7 +133,7 @@
         "ReactJS",
         "Firebase"
       ],
-      "description": "Sistema/PWA completo para gestão de palestras academicas, com gestão de participantes, visualização de fotos, emissão de certificado."
+      "description": "Complete PWA system for managing academic lectures, with participant management, photo viewing and certificate issuance."
     }
   ]
 }

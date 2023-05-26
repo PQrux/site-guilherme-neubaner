@@ -1,48 +1,48 @@
 {
   "title": "<1>Stack</1>",
-  "description": "Sou adepto de metodologias de desenvolvimento ágil que produzam soluções de baixo custo e alta performance.\n\nPor pensar dessa forma adoto tecnologias que garantam essas características no desenvolvimento sem sacrificar a qualidade e estabilidade do serviço.\n\nAlém disso, minha stack é focada em Javascript/Typescript e Docker o que reduz a curva de aprendizagem da equipe e facilita a configuração do ambiente de trabalho.",
+  "description": "I am an enthusiast of agile development methodologies that produce low-cost and high-performance solutions.\n\nBy thinking in this way, I adopt technologies that guarantee these characteristics in the development without sacrificing the quality and stability of the service.\n\nIn addition, my stack is focused on Javascript/Typescript and Docker, which reduces the team's learning curve and facilitates the configuration of the work environment.",
   "list": [
     {
       "level": "Expert",
       "image": "node-logo.svg",
       "name": "NodeJS",
-      "description": "Projetos de backend e microsserviços."
+      "description": "Back-end and Microservices Projects."
     },
     {
       "level": "Expert",
       "image": "react-logo.svg",
       "name": "ReactJS",
-      "description": "Framework para projetos frontend e WebApps."
+      "description": "Framework for Front-end and WebApp projects."
     },
     {
       "level": "Expert",
       "image": "firebase-logo.svg",
       "name": "Firebase",
-      "description": "Infraestrutura para base de dados e armazenamento de arquivos."
+      "description": "Database and File storage infraestructure."
     },
     {
       "level": "Competent",
       "image": "react-logo.svg",
       "name": "React Native",
-      "description": "Aplicações mobile Android e IOS."
+      "description": "Android and IOS app projects."
     },
     {
       "level": "Competent",
       "image": "docker-logo.svg",
       "name": "Docker",
-      "description": "Microsserviços e configuração de ambientes."
+      "description": "Microservices and development enviroment configuration."
     },
     {
       "level": "Competent",
       "image": "google-logo.svg",
       "name": "GCP",
-      "description": "Plataforma de hospedagem dos serviços."
+      "description": "Services and products hosting platform."
     },
     {
       "level": "Begginer",
       "image": "csharp-logo.svg",
       "name": "C# .NET",
-      "description": "Microsserviços."
+      "description": "Microservices."
     }
   ]
 }
