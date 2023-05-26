@@ -10,6 +10,7 @@ export interface TextProps {
 }
 
 const sizes = {
+    xSmall: '0.75rem',
     small: '0.90rem',
     normal: '1rem',
     large: '1.2rem',

@@ -1,11 +1,18 @@
 import styled from "@emotion/styled";
+import { DetailedHTMLProps, ElementType, HTMLAttributes } from "react";
 import pSBC from 'shade-blend-color';
 import DefineDefaultColor from "../../utils/define_default_color";
 
-export interface TouchableProps{
+type TouchableElements = HTMLDivElement &  HTMLButtonElement & HTMLAnchorElement;
+
+export interface TouchableProps extends DetailedHTMLProps<HTMLAttributes<TouchableElements>, TouchableElements>{
     variant?: 'contained' | 'outlined';
     color?: ColorType;
     children?: any;
+    as?: ElementType<any> | undefined;
+    href?: string;
+    target?: string;
+    size?: 'normal' | 'small';
 }
 
 
@@ -17,26 +24,28 @@ const Touchable = styled.div<TouchableProps>(({theme, ...props}) => {
     const outlined = props.variant === 'outlined';
 
     return ({
+        fontFamily: theme.fontFamily,
         border: '2px solid',
         borderColor: color,
-        padding: '5px 10px',
+        padding: props.size === 'small' ? '2px 4px' : '5px 10px',
         borderRadius: '6px',
+        textDecoration: 'none',
         //flex: 1,
         display: 'flex',
         justifyContent: 'center',
         color: outlined ? color : theme.colors.text,
-        backgroundColor: outlined ? undefined : color,
+        backgroundColor: outlined ? 'transparent' : color,
         transition: 'color 0.3s, background-color 0.3s, border-color 0.3s',
         userSelect: 'none',
         '&:hover': {
             borderColor: lighter,
             color: outlined ? lighter : undefined,
-            backgroundColor: outlined ? undefined : lighter,
+            backgroundColor: outlined ? 'transparent' : lighter,
         },
         '&:active':{
             borderColor: darker,
             color: outlined ? darker : undefined,
-            backgroundColor: outlined ? undefined : darker,
+            backgroundColor: outlined ? 'transparent' : darker,
         }
     })
 })

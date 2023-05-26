@@ -13,7 +13,7 @@ export default function SwapLang(){
     const i18n = useI18next();
     
     return (
-        <Flex style={{position: 'absolute', top: '10px', left: '10px'}}>
+        <Flex style={{position: 'absolute', top: '10px', left: '10px', zIndex: 11}}>
             {i18n.languages.map((l, i) => (
                 <Touchable 
                     key={l} 

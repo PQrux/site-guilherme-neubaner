@@ -1,12 +1,8 @@
-import styled from "@emotion/styled";
-import Touchable from "../touchable";
 
-const _Button = styled(Touchable)(({theme}) => ({
-    fontFamily: theme.fontFamily,
-}));
+import Touchable, { TouchableProps } from "../touchable";
 
-export default function Button(props: HTMLProps<HTMLButtonElement>){
+export default function Button(props: TouchableProps){
     return (
-        <_Button as={"button"} {...props as HTMLProps<HTMLDivElement>}/>
+        <Touchable as={"button"} {...props}/>
     )
 }

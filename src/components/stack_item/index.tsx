@@ -15,9 +15,7 @@ export default function StackItem(props: StackItemProps){
         <Flex direction="column" gap="7px" align="center">
             {props.image}
             <Chip color={props.levelColor}>
-                <Text>
-                    {props.level}
-                </Text>
+                {props.level}
             </Chip>
             <Text align="center">
                 {props.name}

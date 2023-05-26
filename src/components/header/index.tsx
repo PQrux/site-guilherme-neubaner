@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Fragment, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
@@ -31,7 +32,7 @@ const Container = styled(Flex)(() => ({
     '&.sticked .tophided':{
         opacity: 1,
     },
-
+    zIndex: 10
 }));
 
 const ObserverRef = styled.div(() => ({
@@ -48,7 +49,7 @@ const Drawer = styled.div(() => ({
     width: '0px',
     top: '0', 
     right: '0',
-    zIndex: 2,
+    zIndex: 13,
     backdropFilter: 'blur(20px)',
     backgroundColor: 'rgba(0,0,0,0.3)',
     opacity: '0',
@@ -74,13 +75,9 @@ export default function Header(){
         threshold: 0,
     })
 
-    const links = [
-        {label: 'INÍCIO', to: '#home'},
-        {label: 'SOBRE MIM', to: '#about'},
-        {label: 'STACK', to: '#stack'},
-        {label: 'PROJETOS', to: '#projects'},
-        {label: 'CONTATO', to: '#contact'},
-    ]
+    const common = useTranslation('common');
+
+    const sections: {label: string, to: string}[] = common.t<any, any>('sections');
 
     return (
         <Fragment>
@@ -92,7 +89,7 @@ export default function Header(){
                 <div style={{flex: 1}}/>
                 {laptop ? (
                     <Flex gap="20px">
-                        {links.map(item => (
+                        {sections.map(item => (
                             <Link to={item.to} color="primary" key={item.to}>
                                 {item.label}
                             </Link>
@@ -110,7 +107,7 @@ export default function Header(){
                         <Logo width={'45%'} style={{maxWidth: '250px'}}/>
                         <Flex align="center" justify="center" direction="column" gap="10px" flex="1">
                             
-                            {links.map(item => (
+                            {sections.map(item => (
                                 <Link onClick={close} to={item.to} color="primary" key={item.to}>
                                     <Text size="xxLarge" color="inherit">
                                         {item.label}

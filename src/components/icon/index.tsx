@@ -13,6 +13,7 @@ const Icon = styled.div<{size?: keyof typeof sizes | AnyInherit}>(({theme, ...pr
     return {
         color: color,
         fontSize: props.size ? (sizes as any)[props.size] || props.size : sizes.normal,
+        display: 'inline-flex',
     }
 })
 

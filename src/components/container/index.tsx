@@ -2,14 +2,15 @@ import styled from "@emotion/styled";
 import { PropsWithChildren } from "react";
 
 export interface ContainerProps extends PropsWithChildren{
-    bgcolor?: 'bgPrimary' | 'bgSecondary' | 'primary';
+    bgcolor: ColorType;
     fullHeight?: boolean;
 }
 
 const Wrapper = styled.div<ContainerProps>(({bgcolor, fullHeight, theme}) => ({
     width: '100%',
     minHeight: fullHeight ? '100vh' : undefined,
-    backgroundColor: bgcolor ? theme.colors[bgcolor] : bgcolor,
+    //@ts-ignore
+    backgroundColor: bgcolor in theme.colors ? theme.colors[bgcolor] : bgcolor,
 }));
 
 const _Container = styled.div(({theme}) => ({
