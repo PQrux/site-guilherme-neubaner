@@ -3,13 +3,13 @@ import { navigate } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { IoIosMail, IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io";
 import _Logo from "../../assets/logo.svg";
+import AutoSpring from "../../components/auto_spring";
 import Button from "../../components/button";
 import Container from "../../components/container";
 import Flex from "../../components/flex";
 import Icon from "../../components/icon";
 import RichTrans from "../../components/rich_trans";
 import Text from "../../components/text";
-import useBreakpoints from "../../utils/use_breakpoints";
 
 const Logo = styled(_Logo)(({theme}) => ({
     maxWidth: '300px',
@@ -40,7 +40,6 @@ const contactMethods = [
 ];
 
 export default function Home(props: {bgcolor: ColorType}){
-    const laptop = useBreakpoints("laptop");
     const common = useTranslation('common');
     const contactLabels: {[key: string]: {label: string, prettyValue: string, url: string}} = common.t<any,any>('social_media');
     
@@ -49,12 +48,14 @@ export default function Home(props: {bgcolor: ColorType}){
             <Flex direction="column" justify="center" gap="10px" style={{marginTop: 30}}>
                 <Logo/>
                 <Flex direction="column">
-                    <Text size="xxxLarge" align="center" as="h1">
-                        <RichTrans ns="home" i18nKey="title"/>
-                    </Text>
-                    <Text align="center" size="large" as='p'>
+                    <AutoSpring>
+                        <Text size="xxxLarge" align="center" as="h1">
+                            <RichTrans ns="home" i18nKey="title"/>
+                        </Text>
+                    </AutoSpring>
+                    <AutoSpring align="center" size="large" as='p'>
                         <RichTrans ns="home" i18nKey="subtitle"/>
-                    </Text>
+                    </AutoSpring>
                 </Flex>
                 <ChipContainer style={{marginBottom: '20px'}}>
                     {contactMethods.map(method => (

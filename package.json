@@ -20,6 +20,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/inter": "^4.5.15",
+    "@react-spring/web": "^9.7.2",
     "gatsby": "^5.7.0",
     "gatsby-plugin-emotion": "^8.7.0",
     "gatsby-plugin-image": "^3.7.0",

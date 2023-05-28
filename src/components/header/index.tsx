@@ -46,17 +46,18 @@ const ObserverRef = styled.div(() => ({
 const Drawer = styled.div(() => ({
     position: 'fixed',
     height: '100%', 
-    width: '0px',
+    width: '100%',
     top: '0', 
     right: '0',
-    zIndex: 13,
+    zIndex: -1,
     backdropFilter: 'blur(20px)',
     backgroundColor: 'rgba(0,0,0,0.3)',
     opacity: '0',
-    transition: 'opacity 0.4s, width 0.4s',
+    transition: 'opacity 0.4s, z-index 0.4s',
     '&.open':{
         width: '100%',
         opacity: '1',
+        zIndex: 13,
     },
     '& > *': {
         display: 'none',
