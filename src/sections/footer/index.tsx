@@ -1,4 +1,5 @@
-import Logo from "../../assets/logo.svg";
+
+import Logo from "../../assets/logo";
 import Container from "../../components/container";
 import Flex from "../../components/flex";
 import RichTrans from "../../components/rich_trans";

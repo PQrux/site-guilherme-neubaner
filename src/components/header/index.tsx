@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Fragment, useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo";
 import useBreakpoints from "../../utils/use_breakpoints";
 import Flex from "../flex";
 import Icon from "../icon";
@@ -85,7 +85,6 @@ export default function Header(){
             <ObserverRef ref={observer.ref}/>
             <Drawer/>
             <Container as="header" className={!observer.inView && observer[2] ? 'sticked' : undefined}>
-                
                 <Logo height="70%" className="tophided"/>
                 <div style={{flex: 1}}/>
                 {laptop ? (

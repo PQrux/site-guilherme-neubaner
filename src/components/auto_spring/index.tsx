@@ -23,6 +23,7 @@ export default function AutoSpring<C extends ComponentType = DivComponent, P = C
 
         return [_RootComponent, addProps];
     }, [component]);
+    console.log(RootComponent);
 
     return (
         <RootComponent {...otherProps} {...addProps}/>

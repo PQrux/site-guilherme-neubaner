@@ -1,0 +1,158 @@
+<svg id="animated_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 466.12 346" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <style>
+        #animated_logo{
+            --primary: #0071e3;
+            --secondary: #000;
+        }
+        #letter_g {
+            animation: letter_g_c_o 2200ms linear 1 normal forwards;
+            fill: var(--secondary);
+        }
+
+        @keyframes letter_g_c_o {
+            0% {
+                opacity: 0
+            }
+
+            68.181818% {
+                opacity: 0
+            }
+
+            95.454545% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        #letter_n {
+            animation: letter_n_c_o 2200ms linear 1 normal forwards;
+            fill: var(--primary);
+        }
+
+        @keyframes letter_n_c_o {
+            0% {
+                opacity: 0
+            }
+
+            54.545455% {
+                opacity: 0
+            }
+
+            81.818182% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        #stroke_n {
+            animation-name: stroke_n__sz, stroke_n_c_o;
+            animation-duration: 2200ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            fill: var(--primary);
+        }
+
+        @keyframes stroke_n__sz {
+            0% {
+                width: 0px;
+                height: 31px
+            }
+
+            9.090909% {
+                width: 0px;
+                height: 31px;
+                animation-timing-function: cubic-bezier(0.42, 0, 1, 1)
+            }
+
+            54.545455% {
+                width: 194px;
+                height: 31px
+            }
+
+            100% {
+                width: 194px;
+                height: 31px
+            }
+        }
+
+        @keyframes stroke_n_c_o {
+            0% {
+                opacity: 0
+            }
+
+            9.090909% {
+                opacity: 0;
+                animation-timing-function: cubic-bezier(0.42, 0, 1, 1)
+            }
+
+            45.454545% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        #stroke_g {
+            animation-name: stroke_g__sz, stroke_g_c_o;
+            animation-duration: 2200ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            fill: var(--secondary);
+        }
+
+        @keyframes stroke_g__sz {
+            0% {
+                width: 0px;
+                height: 31px;
+                animation-timing-function: cubic-bezier(0.42, 0, 1, 1)
+            }
+
+            45.454545% {
+                width: 581.263662px;
+                height: 31px
+            }
+
+            100% {
+                width: 581.263662px;
+                height: 31px
+            }
+        }
+
+        @keyframes stroke_g_c_o {
+            0% {
+                opacity: 0;
+                animation-timing-function: cubic-bezier(0.42, 0, 1, 1)
+            }
+
+            36.363636% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+    </style>
+    <g>
+        <g>
+
+            <path id="letter_g" d="M64.72,288.84c-13.304512-5.348125-25.225756-13.638637-34.87-24.25Q15.4,248.69,7.71,226.07t-7.71-50.86v-.16q0-37.31,13.46-64.16t38.2-41.36Q76.4,55,110,55q27.74,0,48.66,9.82c26.824599,12.073923,46.119535,36.417234,51.75,65.29l.65,2.75h-42.36l-.65-1.78q-6.65-18.81-21.49-29.36t-36.42-10.53q-21.09,0-36.17,9.89t-23.2,28.63q-8.12,18.73-8.11,45v.16q0,20.12,4.71,36.09c2.723749,9.849652,7.380909,19.05859,13.7,27.09c5.818152,7.255387,13.229896,13.072546,21.66,17c8.959292,4.071045,18.710343,6.103226,28.55,5.95q17.67,0,31.22-6.81c8.73303-4.268465,16.094814-10.899268,21.25-19.14q7.71-12.33,8-28.71l.17-3.57h-58.05v-32.59h98.95v25.31q0,23.69-6.89,42.5c-8.556858,24.449663-27.780337,43.673142-52.23,52.23q-18.9,7-42.91,7-25.63-.02-46.07-8.38Z" opacity="0"/>
+            <path id="letter_n" d="M271.8,59.07h37.64L446.34,256l-39.58-32.76h17.69v-164.17h41.55v234.07h-37.34L291.59,95.73l39.58,32.6h-17.84v164.81h-41.53Z" opacity="0" />
+            <rect id="stroke_n" width="0" height="31" rx="0" ry="0" transform="translate(272.12 0)" opacity="0"/>
+            <rect id="stroke_g" width="0" height="31" rx="0" ry="0" transform="matrix(.366443 0 0 1 0.12 315)" opacity="0"/>
+        </g>
+    </g>
+</svg>

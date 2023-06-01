@@ -1,8 +1,6 @@
 
-import Touchable, { TouchableProps } from "../touchable";
+import Touchable from "../touchable";
 
-export default function Button(props: TouchableProps){
-    return (
-        <Touchable as={"button"} {...props}/>
-    )
-}
+const Button = Touchable.withComponent('button');
+
+export default Button;

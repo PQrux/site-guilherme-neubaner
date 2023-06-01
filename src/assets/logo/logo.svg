@@ -1,8 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466.12 346">
-    <defs>
-        <style>.cls-1{fill:#0071e3;} .cls-2{fill:#FFFFFF;}</style>
-    </defs>
-    <title>Logo</title>
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 466.12 346">
+    <style>
+        #logo{
+            --primary: #0071e3;
+            --secondary: #FFFFFF;
+        }
+        .cls-1{
+            fill:var(--primary);
+        }
+        .cls-2{
+            fill: var(--secondary);
+        }
+    </style>
     <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_1-2" data-name="Layer 1">
             <path
