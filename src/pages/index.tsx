@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import { DynamicImgProvider } from "../components/dynamic_img/provider";
 import Header from "../components/header";
+import Seo from "../components/seo";
 import SwapLang from "../components/swap_lang";
 import RootLayout from "../layouts/root_layout";
 import About from "../sections/about";
@@ -36,6 +37,8 @@ export default function Index(){
         </RootLayout>
     )
 }
+
+export const Head = Seo;
 
 export const query = graphql`
   query ($language: String!) {

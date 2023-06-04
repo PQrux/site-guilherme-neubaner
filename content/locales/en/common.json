@@ -1,5 +1,6 @@
 {
-    "sitename": "Guilherme Neubaner",
+    "sitename": "Guilherme Neubaner - Full Cycle Developer",
+    "sitedescription": "I'm Guilherme Neubaner, a Full Cycle Developer!",
     "copyright": "All rights reserved.",
     "sections": [
         {"label": "HOME", "to": "#home"},

@@ -6,3 +6,4 @@ src/gatsby-types.d.ts
 content/images/me2.jpg
 content/images/me.jpg
 .nvmrc
+.firebase

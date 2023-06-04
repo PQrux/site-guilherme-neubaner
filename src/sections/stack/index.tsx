@@ -1,5 +1,8 @@
+import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useMemo } from "react";
+import pSBC from 'shade-blend-color';
 import Container from "../../components/container";
 import { DynamicImg } from "../../components/dynamic_img";
 import Flex from "../../components/flex";
@@ -19,15 +22,15 @@ const StackList = styled(Flex)({
     },
 });
 
-const levelColor: {[k: string]: string} = {
-    'Expert': '#061cc2',
-    'Competent': 'primary',
-    'Begginer': '#0ccccf'
-}
-
 export default function Stack(props: {bgcolor: ColorType}){
     const stack = useTranslation('stack');
     const stackList: {level: string, name: string, description: string, image: string}[] = stack.t<any, any>('list');
+    const theme = useTheme();
+    const levelColor: {[k: string]: string} = useMemo(() => ({
+        'Expert': pSBC(-0.3, theme.colors.primary)!,
+        'Competent': theme.colors.primary,
+        'Begginer': pSBC(0.3, theme.colors.primary)!,
+    }), [theme.colors.primary]);
     return (
         <Container bgcolor={props.bgcolor} fullHeight>
             <Title>

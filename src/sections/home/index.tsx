@@ -34,7 +34,7 @@ const ChipContainer = styled(Flex)(({theme}) => ({
 }))
 
 const contactMethods = [
-    {key: 'mail', color: '#c71610', icon: <IoIosMail/>},
+    {key: 'mail', color: '#f01811', icon: <IoIosMail/>},
     {key: 'linkedin', color: '#0E76A8', icon: <IoLogoLinkedin/>},
     {key: 'whatsapp', color: '#25D366', icon: <IoLogoWhatsapp/>},
     {key: 'github', color: '#8C8C8C', icon: <IoLogoGithub/>},
@@ -47,7 +47,7 @@ export default function Home(props: {bgcolor: ColorType}){
     const springs = useTrail(3 + contactMethods.length, {
         from: { opacity: 0, x: -20 },
         to: { opacity: 1, x: 0 },
-        delay: 2000,
+        delay: 1000,
         config: { duration: 2000, }
     })
     
@@ -74,9 +74,7 @@ export default function Home(props: {bgcolor: ColorType}){
                             variant="outlined" 
                             key={method.key} 
                             color={method.color} 
-                            as="a" 
-                            href={contactLabels[method.key].url} 
-                            target="_blank"
+                            onClick={() => window.open(contactLabels[method.key].url, '_blank')}
                             style={springs[i+2]}
                         >
                             <Flex align="center">

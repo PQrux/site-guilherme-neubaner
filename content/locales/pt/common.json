@@ -1,5 +1,6 @@
 {
-    "sitename": "Guilherme Neubaner",
+    "sitename": "Guilherme Neubaner - Desenvolvedor Full Cycle",
+    "sitedescription": "Sou Guilherme Neubaner, um desenvolvedor Full Cycle! Será um prazer te conhecer.",
     "copyright": "Todos os direitos reservados.",
     "sections": [
         {"label": "INÍCIO", "to": "#home"},

@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
+import { useTrail } from "@react-spring/web";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import { Fragment, useState } from "react";
-import { MdClose, MdMenu } from "react-icons/md";
-import { useInView } from "react-intersection-observer";
+import { Fragment, useEffect, useState } from "react";
+import { MdMenu } from "react-icons/md";
 import Logo from "../../assets/logo";
 import useBreakpoints from "../../utils/use_breakpoints";
+import AutoSpring from "../auto_spring";
+import Drawer from "../drawer";
 import Flex from "../flex";
 import Icon from "../icon";
 import Link from "../link";
-import Text from "../text";
 
 const Container = styled(Flex)(() => ({
     height: '50px',
@@ -33,94 +34,56 @@ const Container = styled(Flex)(() => ({
         opacity: 1,
     },
     zIndex: 10
-}));
+})).withComponent('header');
 
-const ObserverRef = styled.div(() => ({
-    top: '0', 
-    left: '0', 
-    position: 'absolute', 
-    height: '50px', 
-    width: '10px'
-}));
-
-const Drawer = styled.div(() => ({
-    position: 'fixed',
-    height: '100%', 
-    width: '100%',
-    top: '0', 
-    right: '0',
-    zIndex: -1,
-    backdropFilter: 'blur(20px)',
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    opacity: '0',
-    transition: 'opacity 0.4s, z-index 0.4s',
-    '&.open':{
-        width: '100%',
-        opacity: '1',
-        zIndex: 13,
-    },
-    '& > *': {
-        display: 'none',
-    },
-    '&.open > *': {
-        display: 'block'
-    }
-}));
+const SCROLL_OFFSET = 50;
 
 export default function Header(){
     const laptop = useBreakpoints('laptop');
     const [openDrawer, setOpen] = useState(false);
-    const close = () => setOpen(false);
-
-    const observer = useInView({
-        threshold: 0,
-    })
 
     const common = useTranslation('common');
-
     const sections: {label: string, to: string}[] = common.t<any, any>('sections');
+    
+    const [atTop, setAtTop] = useState(true);
+    useEffect(() => {
+        setAtTop(window.scrollY <= SCROLL_OFFSET);
+        const listener = () => setAtTop(window.scrollY <= SCROLL_OFFSET);
+        window.addEventListener('scroll', listener);
+        return () => window.removeEventListener('scroll', listener);
+    }, []);
+
+    const close = () => setOpen(false);
+
+    const springs = useTrail(sections.length, {
+        from: { opacity: 0, x: -20 },
+        to: { opacity: 1, x: 0 },
+        delay: 2000,
+        config: { duration: 1000, }
+    })
 
     return (
         <Fragment>
-            <ObserverRef ref={observer.ref}/>
-            <Drawer/>
-            <Container as="header" className={!observer.inView && observer[2] ? 'sticked' : undefined}>
+            <Container className={atTop ? '' : 'sticked'}>
                 <Logo height="70%" className="tophided"/>
                 <div style={{flex: 1}}/>
-                {laptop ? (
+                {laptop === true ? (
                     <Flex gap="20px">
-                        {sections.map(item => (
-                            <Link to={item.to} color="primary" key={item.to}>
-                                {item.label}
-                            </Link>
+                        {sections.map((item, i) => (
+                            <AutoSpring style={springs[i]}>
+                                <Link to={item.to} color="primary" key={item.to}>
+                                    {item.label}
+                                </Link>
+                            </AutoSpring>
                         ))}
                     </Flex>
-                ) : (
+                ) : laptop === false ? (
                     <Icon color="primary" onClick={() => setOpen(true)}>
                         <MdMenu/>
                     </Icon>
-                )}
+                ) : null}
             </Container>
-            <Drawer className={openDrawer ? 'open' : undefined}>
-                <div style={{height: '100%', padding: '20px'}}>
-                    <Flex style={{height: '100%'}} direction='column' align="center">
-                        <Logo width={'45%'} style={{maxWidth: '250px'}}/>
-                        <Flex align="center" justify="center" direction="column" gap="10px" flex="1">
-                            
-                            {sections.map(item => (
-                                <Link onClick={close} to={item.to} color="primary" key={item.to}>
-                                    <Text size="xxLarge" color="inherit">
-                                        {item.label}
-                                    </Text>
-                                </Link>
-                            ))}    
-                            <Icon color="primary" size={'3rem'} onClick={close}>
-                                <MdClose/>
-                            </Icon>
-                        </Flex>
-                    </Flex>
-                </div>
-            </Drawer>
+            <Drawer onClose={close} open={openDrawer}/>
         </Fragment>
     )
 }
