@@ -10,7 +10,7 @@ export default function Footer(props: {bgcolor: ColorType}){
         <Container bgcolor={props.bgcolor}>
             <Flex direction="column" align="center" style={{padding: 20}} gap="20px">
                 <Logo style={{maxWidth: 150}}/>
-                <Text size="large">
+                <Text size="large" align="center">
                     <RichTrans ns="common" i18nKey="sitename"/>
                 </Text>
                 <Text color="subText">

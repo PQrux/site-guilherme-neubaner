@@ -1,0 +1,16 @@
+/* TEAM */
+Your title: Guilherme Neubaner
+Site: neubaner.com
+Location: Santa Luzia, Brazil
+
+/* SITE */                  
+Standards: HTML5, CSS3, Javascript                  
+Software: GatsbyJS
+
+/* CREDITS */
+- Assets: 1pankaj-patel-Fi-GJaLRGKc-unsplash.jpg
+  Author: https://unsplash.com/pt-br/@pankajpatel
+- Asset: 3fotis-fotopoulos-DuHKoV44prg-unsplash.jpg, 2fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg
+  Author: https://unsplash.com/pt-br/@ffstop
+- Asset: puff.svg
+  Author: https://github.com/SamHerbert

@@ -18,21 +18,21 @@ export default function Index(){
             <Header/>
             <SwapLang/>
             <section id="home">
-              <Home bgcolor="bgPrimary"/>
+              <Home bgcolor="bgSecondary"/>
             </section>
             <section id="about">
-              <About bgcolor="bgSecondary"/>
+              <About bgcolor="bgPrimary"/>
             </section>
             <section id="stack">
-              <Stack bgcolor="bgPrimary"/>
+              <Stack bgcolor="bgSecondary"/>
             </section>
             <section id="projects">
-              <Projects bgcolor="bgSecondary"/>
+              <Projects bgcolor="bgPrimary"/>
             </section>
             <section id="contact">
-              <Contact bgcolor="bgPrimary"/>
+              <Contact bgcolor="bgSecondary"/>
             </section>
-            <Footer bgcolor="bgSecondary"/>
+            <Footer bgcolor="bgPrimary"/>
           </DynamicImgProvider>
         </RootLayout>
     )
