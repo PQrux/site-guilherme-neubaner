@@ -15,7 +15,7 @@
                 opacity: 0;
             }
         }
-        svg #wheel {
+        .animate svg #wheel {
             animation: scroll ease 2s infinite;
         }
     </style>

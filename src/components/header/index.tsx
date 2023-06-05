@@ -4,6 +4,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Fragment, useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import Logo from "../../assets/logo";
+import { useLoading } from "../../contexts/loading_context";
 import useBreakpoints from "../../utils/use_breakpoints";
 import AutoSpring from "../auto_spring";
 import Drawer from "../drawer";
@@ -41,6 +42,7 @@ const SCROLL_OFFSET = 50;
 export default function Header(){
     const laptop = useBreakpoints('laptop');
     const [openDrawer, setOpen] = useState(false);
+    const [loading] = useLoading();
 
     const common = useTranslation('common');
     const sections: {label: string, to: string}[] = common.t<any, any>('sections');
@@ -56,8 +58,8 @@ export default function Header(){
     const close = () => setOpen(false);
 
     const springs = useTrail(sections.length, {
-        from: { opacity: 0, x: -20 },
-        to: { opacity: 1, x: 0 },
+        opacity: loading.loaded ? 1 : 0,
+        x: loading.loaded ? 0 : -20,
         delay: 2000,
         config: { duration: 1000, }
     })

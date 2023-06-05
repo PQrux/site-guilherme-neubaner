@@ -6,7 +6,6 @@
             --secondary: #000;
         }
         #letter_g {
-            animation: letter_g_c_o 2200ms linear 1 normal forwards;
             fill: var(--secondary);
         }
 
@@ -29,7 +28,6 @@
         }
 
         #letter_n {
-            animation: letter_n_c_o 2200ms linear 1 normal forwards;
             fill: var(--primary);
         }
 
@@ -52,12 +50,6 @@
         }
 
         #stroke_n {
-            animation-name: stroke_n__sz, stroke_n_c_o;
-            animation-duration: 2200ms;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-            animation-direction: normal;
-            animation-iteration-count: 1;
             fill: var(--primary);
         }
 
@@ -104,12 +96,6 @@
         }
 
         #stroke_g {
-            animation-name: stroke_g__sz, stroke_g_c_o;
-            animation-duration: 2200ms;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-            animation-direction: normal;
-            animation-iteration-count: 1;
             fill: var(--secondary);
         }
 
@@ -143,6 +129,30 @@
 
             100% {
                 opacity: 1
+            }
+        }
+        .animate {
+            #letter_g {
+                animation: letter_g_c_o 2200ms linear 1 normal forwards;
+            }
+            #letter_n {
+                animation: letter_n_c_o 2200ms linear 1 normal forwards;
+            }
+            #stroke_g {
+                animation-name: stroke_g__sz, stroke_g_c_o;
+                animation-duration: 2200ms;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+            }
+            #stroke_n {
+                animation-name: stroke_n__sz, stroke_n_c_o;
+                animation-duration: 2200ms;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+                animation-direction: normal;
+                animation-iteration-count: 1;
             }
         }
     </style>
