@@ -18,6 +18,7 @@ export default function About(props: {bgcolor: ColorType}){
     const strengthWeakness = useTranslation('strength_weakness');
 
     const laptop = useBreakpoints("laptop");
+    const tablet = useBreakpoints("tablet");
 
     const experienceList: {company: string, position: string, description: string}[] = experience.t<any, any>('list');
     const formationList: {course: string, college: string, period: string}[] = formation.t<any, any>('list');
@@ -25,8 +26,8 @@ export default function About(props: {bgcolor: ColorType}){
 
     return (
         <Container bgcolor={props.bgcolor} fullHeight>
-            <Flex direction={laptop ? 'row' : 'column'}>
-                <Flex direction="column">
+            <Flex direction={tablet ? 'row' : 'column'} gap="10px" justify="space-between">
+                <Flex direction="column" style={{maxWidth: 650}}>
                     <Title>
                         <RichTrans ns="about" i18nKey="title"/>
                     </Title>
@@ -34,7 +35,7 @@ export default function About(props: {bgcolor: ColorType}){
                         <RichTrans ns="about" i18nKey="content"/>
                     </Text>
                 </Flex>
-                <DynamicImg src="me2.jpg" alt="Guilherme Neubaner" style={{width: 450, maxWidth: '100%', alignSelf: 'center'}}/>
+                <DynamicImg src="me.png" alt="Guilherme Neubaner" style={{width: 350, maxWidth: '100%', alignSelf: 'center'}}/>
             </Flex>
             <Flex style={{marginTop: '40px'}} direction={laptop ? 'row' : 'column'}>
                 <Flex flex={1} direction="column">
@@ -85,7 +86,7 @@ export default function About(props: {bgcolor: ColorType}){
                     </Chip>
                     <Flex direction="column" as="ul" gap="10px">
                         {swList.filter(item => item.type === 'strength').map(item => (
-                            <li>
+                            <li key={item.name}>
                                 <Text color="primary">{item.name}:&nbsp;</Text>
                                 <Text>{item.description}</Text>
                             </li>
@@ -98,7 +99,7 @@ export default function About(props: {bgcolor: ColorType}){
                     </Chip>
                     <Flex direction="column" as="ul" gap="10px">
                         {swList.filter(item => item.type === 'weakness').map(item => (
-                            <li>
+                            <li key={item.name}>
                                 <Text color="primary">{item.name}:&nbsp;</Text>
                                 <Text>{item.description}</Text>
                             </li>

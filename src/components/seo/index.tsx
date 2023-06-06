@@ -17,6 +17,7 @@ export default function Seo(props: {children: any, data: {locales: {edges: {node
             <meta name="theme-color" content="#000000" />
             <link rel="apple-touch-icon" href="shortcut.png" />
             <link rel="shortcut icon" href="shortcut.png" />
+            <script type="module" src="analytics.js"></script>
             {props.children}
         </Fragment>
     )

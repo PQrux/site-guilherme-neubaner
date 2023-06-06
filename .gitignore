@@ -3,7 +3,6 @@ node_modules/
 public
 src/gatsby-types.d.ts
 /coverage/
-content/images/me2.jpg
-content/images/me.jpg
 .nvmrc
 .firebase
+firebase-debug.log

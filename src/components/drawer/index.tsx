@@ -62,7 +62,7 @@ export default function Drawer(props: {open: boolean, onClose: () => void}){
                     </AutoSpring>
                     <Flex align="center" justify="center" direction="column" gap="10px">
                         {sections.map((item, i) => (
-                            <AutoSpring style={contentSprings[i+1]}>
+                            <AutoSpring style={contentSprings[i+1]} key={item.to}>
                                 <Link onClick={props.onClose} to={item.to} color="primary" key={item.to}>
                                     <Text size="xLarge" color="inherit">
                                         {item.label}

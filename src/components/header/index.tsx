@@ -72,7 +72,7 @@ export default function Header(){
                 {laptop === true ? (
                     <Flex gap="20px">
                         {sections.map((item, i) => (
-                            <AutoSpring style={springs[i]}>
+                            <AutoSpring style={springs[i]} key={item.to}>
                                 <Link to={item.to} color="primary" key={item.to}>
                                     {item.label}
                                 </Link>

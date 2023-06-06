@@ -36,6 +36,7 @@ export default function Projects(props: {bgcolor: ColorType}){
             <ProjectList>
                 {projectList.map(p => (
                     <ProjectItem
+                        key={p.name}
                         title={p.name}
                         description={p.description}
                         stack={p.stack}
