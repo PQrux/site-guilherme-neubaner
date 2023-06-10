@@ -9,7 +9,7 @@ const TouchableGroup = styled(Flex)({
         borderTopLeftRadius: '0 !important', 
         borderBottomLeftRadius: '0 !important',
     },
-    [`& > ${Touchable}:first-child`]: {
+    [`& > ${Touchable}:first-of-type`]: {
         borderTopLeftRadius: TOUCHABLE_CONSTS.borderRadius+ ' !important', 
         borderBottomLeftRadius: TOUCHABLE_CONSTS.borderRadius+ ' !important', 
         borderLeftWidth: TOUCHABLE_CONSTS.borderSize+ ' !important',

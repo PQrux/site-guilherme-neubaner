@@ -13,7 +13,7 @@ import Icon from "../icon";
 import Link from "../link";
 
 
-const HeaderLogo = styled(Logo)<{atTop: boolean}>(({atTop}) => ({
+const HeaderLogo = styled(Logo, {shouldForwardProp: p => p !== 'atTop' })<{atTop: boolean}>(({atTop}) => ({
     height: "70%",
     opacity: atTop ? 0 : 1,
     transition: 'opacity 0.2s',
