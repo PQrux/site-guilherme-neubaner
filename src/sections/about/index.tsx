@@ -35,7 +35,7 @@ export default function About(props: {bgcolor: ColorType}){
                         <RichTrans ns="about" i18nKey="content"/>
                     </Text>
                 </Flex>
-                <DynamicImg src="me.png" alt="Guilherme Neubaner" style={{width: 350, maxWidth: '100%', alignSelf: 'center'}}/>
+                <DynamicImg src="me.jpg" alt="Guilherme Neubaner" width="350px" style={{maxWidth: '100%', alignSelf: 'center'}}/>
             </Flex>
             <Flex style={{marginTop: '40px'}} direction={laptop ? 'row' : 'column'}>
                 <Flex flex={1} direction="column">

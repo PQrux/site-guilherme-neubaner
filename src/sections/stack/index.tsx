@@ -47,7 +47,7 @@ export default function Stack(props: {bgcolor: ColorType}){
                         description={stack.description}
                         level={stack.level}
                         levelColor={levelColor[stack.level] || 'primary'}
-                        image={<DynamicImg src={stack.image} alt={stack.name} style={{height: 70}}/>}
+                        image={<DynamicImg width="auto" src={stack.image} alt={stack.name} style={{height: 70}}/>}
                     />
                 ))}
             </StackList>

@@ -41,7 +41,7 @@ export default function Projects(props: {bgcolor: ColorType}){
                         description={p.description}
                         stack={p.stack}
                         properties={p.properties}
-                        image={<DynamicImg src={p.image} alt={p.name}/>}
+                        image={<DynamicImg width="auto" src={p.image} alt={p.name}/>}
                     />
                 ))}
             </ProjectList>

@@ -22,7 +22,16 @@ const config: GatsbyConfig = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-emotion",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaults: {
+          placeholder: 'dominantColor',
+          quality: 50,
+          formats: ['auto', 'webp']
+        }
+      }
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-svg",
     {
