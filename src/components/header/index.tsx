@@ -12,28 +12,26 @@ import Flex from "../flex";
 import Icon from "../icon";
 import Link from "../link";
 
-const Container = styled(Flex)(() => ({
+
+const HeaderLogo = styled(Logo)<{atTop: boolean}>(({atTop}) => ({
+    height: "70%",
+    opacity: atTop ? 0 : 1,
+    transition: 'opacity 0.2s',
+}));
+
+const Container = styled(Flex)<{atTop: boolean}>(({atTop}) => ({
     height: '50px',
     padding: '5px 15px',
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
     position: 'sticky',
     top: 0,
     marginTop: '-50px',
     borderBottom: '0px solid #7a7a7a',
     transition: 'background-color 0.4s, border-bottom 0.1s',
-    '& .tophided':{
-        opacity: 0,
-        transition: 'opacity 0.2s',
-    },
-    '&.sticked': {
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid #7a7a7a',
-        backgroundColor: 'rgba(255,255,255,0.1)',
-    },
-    '&.sticked .tophided':{
-        opacity: 1,
-    },
+    backdropFilter: atTop ? 'none' : 'blur(10px)',
+    borderBottomWidth: atTop ? '0px' : '1px',
+    backgroundColor: atTop ? 'transparent' : 'rgba(255,255,255,0.1)',
     zIndex: 10
 })).withComponent('header');
 
@@ -66,9 +64,8 @@ export default function Header(){
 
     return (
         <Fragment>
-            <Container className={atTop ? '' : 'sticked'}>
-                <Logo height="70%" className="tophided"/>
-                <div style={{flex: 1}}/>
+            <Container atTop={atTop}>
+                <HeaderLogo atTop={atTop}/>
                 {laptop === true ? (
                     <Flex gap="20px">
                         {sections.map((item, i) => (

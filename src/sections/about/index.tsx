@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { IoIosSchool } from "react-icons/io";
 import Chip from "../../components/chip";
@@ -11,6 +12,12 @@ import Subtitle from "../../components/subtitle";
 import Text from "../../components/text";
 import Title from "../../components/title";
 import useBreakpoints from "../../utils/use_breakpoints";
+
+const MeImg = styled(DynamicImg)({
+    width: 350,
+    maxWidth: "100%",
+    alignSelf: 'center'
+})
 
 export default function About(props: {bgcolor: ColorType}){
     const formation = useTranslation('formation');
@@ -31,11 +38,11 @@ export default function About(props: {bgcolor: ColorType}){
                     <Title>
                         <RichTrans ns="about" i18nKey="title"/>
                     </Title>
-                    <Text as='p' style={{flex: 1}}>
+                    <Text as='p'>
                         <RichTrans ns="about" i18nKey="content"/>
                     </Text>
                 </Flex>
-                <DynamicImg src="me.jpg" alt="Guilherme Neubaner" width="350px" style={{maxWidth: '100%', alignSelf: 'center'}}/>
+                <MeImg src="me.jpg" alt="Guilherme Neubaner"/>
             </Flex>
             <Flex style={{marginTop: '40px'}} direction={laptop ? 'row' : 'column'}>
                 <Flex flex={1} direction="column">
@@ -80,8 +87,8 @@ export default function About(props: {bgcolor: ColorType}){
                 <RichTrans ns="strength_weakness" i18nKey="title"/>
             </Subtitle>
             <Flex direction={laptop ? 'row' : 'column'}>
-                <Flex flex={1} direction="column">
-                    <Chip style={{alignSelf: "flex-start"}}>
+                <Flex flex={1} direction="column" align="flex-start">
+                    <Chip>
                         <RichTrans ns="strength_weakness" i18nKey="strength_title"/>
                     </Chip>
                     <Flex direction="column" as="ul" gap="10px">
@@ -93,8 +100,8 @@ export default function About(props: {bgcolor: ColorType}){
                         ))}
                     </Flex>
                 </Flex>
-                <Flex flex={1} direction="column">
-                    <Chip color="error" style={{alignSelf: "flex-start"}}>
+                <Flex flex={1} direction="column" align="flex-start">
+                    <Chip color="error">
                         <RichTrans ns="strength_weakness" i18nKey="weakness_title"/>
                     </Chip>
                     <Flex direction="column" as="ul" gap="10px">

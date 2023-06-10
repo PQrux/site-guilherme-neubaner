@@ -22,6 +22,11 @@ const StackList = styled(Flex)({
     },
 });
 
+const ImgH70 = styled(DynamicImg)({
+    height: '70px',
+    width: 'auto'
+})
+
 export default function Stack(props: {bgcolor: ColorType}){
     const stack = useTranslation('stack');
     const stackList: {level: string, name: string, description: string, image: string}[] = stack.t<any, any>('list');
@@ -47,7 +52,7 @@ export default function Stack(props: {bgcolor: ColorType}){
                         description={stack.description}
                         level={stack.level}
                         levelColor={levelColor[stack.level] || 'primary'}
-                        image={<DynamicImg width="auto" src={stack.image} alt={stack.name} style={{height: 70}}/>}
+                        image={<ImgH70 src={stack.image} alt={stack.name}/>}
                     />
                 ))}
             </StackList>

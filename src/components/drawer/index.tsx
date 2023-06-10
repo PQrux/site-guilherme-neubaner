@@ -9,7 +9,7 @@ import Icon from "../icon";
 import Link from "../link";
 import Text from "../text";
 
-const DrawerContainer = styled(animated.div)(() => ({
+const DrawerContainer = styled(animated.div)<{open: boolean}>(({open}) => ({
     position: 'fixed',
     height: '100%', 
     width: '0%',
@@ -18,16 +18,10 @@ const DrawerContainer = styled(animated.div)(() => ({
     zIndex: 13,
     backdropFilter: 'blur(20px)',
     backgroundColor: 'rgba(0,0,0,0.9)',
-    borderLeft: 'none',
-    '&.open':{
-        borderLeft: '0.5px rgba(255,255,255,0.2) solid',
-    },
+    borderLeft: open ? '0.5px rgba(255,255,255,0.2) solid' : 'none',
     '& > *': {
-        display: 'none',
+        display: open ? 'block' : 'none',
     },
-    '&.open > *': {
-        display: 'block'
-    }
 }));
 
 const DrawerInner = styled.div({
@@ -53,11 +47,10 @@ export default function Drawer(props: {open: boolean, onClose: () => void}){
     })
 
     return (
-        <DrawerContainer className={props.open ? 'open' : ''} style={drawerSpring}>
+        <DrawerContainer open={props.open} style={drawerSpring}>
             <DrawerInner>
-                <Flex style={{height: '100%'}} direction='column' align="center" justify="center" gap="20px">
-                    
-                    <AutoSpring style={{...contentSprings[0], display: 'flex', justifyContent: 'center'}}>
+                <Flex direction='column' align="center" justify="center" gap="20px" style={{height: '100%'}}>
+                    <AutoSpring component={Flex} justify="center" style={contentSprings[0]}>
                         <Logo width='170px'/>
                     </AutoSpring>
                     <Flex align="center" justify="center" direction="column" gap="10px">

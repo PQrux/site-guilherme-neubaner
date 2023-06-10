@@ -15,6 +15,10 @@ export interface TouchableProps extends DetailedHTMLProps<HTMLAttributes<Touchab
     size?: 'normal' | 'small';
 }
 
+export const TOUCHABLE_CONSTS = {
+    borderSize: '2px',
+    borderRadius: '6px',
+}
 
 const Touchable = styled.div<TouchableProps>(({theme, ...props}) => {
     
@@ -25,10 +29,10 @@ const Touchable = styled.div<TouchableProps>(({theme, ...props}) => {
 
     return ({
         fontFamily: theme.fontFamily,
-        border: '2px solid',
+        border: `${TOUCHABLE_CONSTS.borderSize} solid`,
         borderColor: color,
         padding: props.size === 'small' ? '2px 4px' : '5px 10px',
-        borderRadius: '6px',
+        borderRadius: TOUCHABLE_CONSTS.borderRadius,
         textDecoration: 'none',
         //flex: 1,
         display: 'flex',

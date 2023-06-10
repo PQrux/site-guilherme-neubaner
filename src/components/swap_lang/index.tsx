@@ -1,14 +1,17 @@
+import styled from "@emotion/styled";
 import { useSpring } from "@react-spring/web";
 import { useI18next } from "gatsby-plugin-react-i18next";
 import AutoSpring from "../auto_spring";
-import Flex from "../flex";
 import Text from "../text";
 import Touchable from "../touchable";
+import TouchableGroup from "../touchable_group";
 
-const borders = {
-    right: {borderTopRightRadius: 0, borderBottomRightRadius: 0, borderRightWidth: '0px'},
-    left: {borderTopLeftRadius: 0, borderBottomLeftRadius: 0, borderLeftWidth: '0px'},
-}
+const AbsoluteTouchableGroup = styled(TouchableGroup)({
+    position: 'absolute', 
+    top: '10px', 
+    left: '10px', 
+    zIndex: 11
+})
 
 export default function SwapLang(){
 
@@ -20,11 +23,10 @@ export default function SwapLang(){
     })
     
     return (
-        <AutoSpring component={Flex} style={{...spring, position: 'absolute', top: '10px', left: '10px', zIndex: 11}}>
+        <AutoSpring component={AbsoluteTouchableGroup} style={spring}>
             {i18n.languages.map((l, i) => (
                 <Touchable 
-                    key={l} 
-                    style={i === 0 ? borders.right : i === i18n.languages.length-1 ? borders.left : {...borders.left, ...borders.right}}
+                    key={l}
                     onClick={() => i18n.changeLanguage(l)}
                     variant={i18n.language === l ? 'contained' : 'outlined'}
                 >

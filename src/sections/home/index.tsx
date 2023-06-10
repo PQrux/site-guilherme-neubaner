@@ -32,6 +32,7 @@ const ChipContainer = styled(Flex)(({theme}) => ({
     gap: 10,
     justifyContent: 'center',
     flexWrap: 'wrap',
+    marginBottom: '20px',
 }))
 
 const contactMethods = [
@@ -69,7 +70,7 @@ export default function Home(props: {bgcolor: ColorType}){
                         </Text>
                     </AutoSpring>
                 </div>
-                <ChipContainer style={{marginBottom: '20px'}}>
+                <ChipContainer>
                     {contactMethods.map((method, i) => (
                         <AutoSpring 
                             component={Button} 

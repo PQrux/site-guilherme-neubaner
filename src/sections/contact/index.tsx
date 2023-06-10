@@ -29,7 +29,7 @@ export default function Contact(props: {bgcolor: ColorType}){
             <Text as="p">
                 <RichTrans ns="contact" i18nKey="description"/>
             </Text>
-            <Flex style={{flexWrap: 'wrap', padding: '50px 0px'}} gap="50px" justify="space-between">
+            <Flex style={{padding: '50px 0px'}} gap="50px" justify="space-between" wrap="wrap">
                 {contactMethods.map(c => (
                     <InfoItem
                         key={c.key}

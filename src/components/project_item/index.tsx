@@ -21,6 +21,10 @@ const ImageContainer = styled.div({
     }
 })
 
+const ChipNowrap = styled(Chip)({
+    whiteSpace: 'nowrap',
+});
+
 export interface ProjectItemProps{
     stack: string[];
     title: string;
@@ -37,11 +41,11 @@ export default function ProjectItem(props: ProjectItemProps){
                     {props.image}
                 </ImageContainer>
                 <Flex direction="column" >
-                    <Flex gap="3px" style={{flexWrap: 'wrap'}}>
+                    <Flex gap="3px" wrap="wrap">
                         {props.stack.map(s => (
-                            <Chip color="primary" key={s} size="small" style={{whiteSpace: 'nowrap'}}>
+                            <ChipNowrap color="primary" key={s} size="small">
                                 {s}
-                            </Chip>
+                            </ChipNowrap>
                         ))}
                     </Flex>
                 </Flex>
@@ -49,16 +53,16 @@ export default function ProjectItem(props: ProjectItemProps){
             <Text size="xLarge">
                 {props.title}
             </Text>
-            <Text style={{flex: 1}}>
+            <Text>
                 {props.description}
             </Text>
-            <Flex align="center" justify="space-evenly" style={{textAlign: 'center'}}>
+            <Flex align="center" justify="space-evenly">
                 {props.properties?.map(p => (
                     <Flex key={p.label} direction="column" align="center">
-                        <Text color="primary">
+                        <Text color="primary" align="center">
                             {p.value}
                         </Text>
-                        <Text size="xSmall">
+                        <Text size="xSmall" align="center">
                             {p.label}
                         </Text>
                     </Flex>
