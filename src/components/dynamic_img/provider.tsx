@@ -5,10 +5,13 @@ import { DynamicImgContext } from "./context";
 export function DynamicImgProvider(props: PropsWithChildren){
     const qr = useStaticQuery(graphql`
         query {
-            allFile(filter: {extension: {in: ["svg", "png", "jpg"]}}) {
+            allFile(filter: {extension: {in: ["svg", "png", "jpg", "webp"]}}) {
                 nodes {
                     relativePath
                     publicURL
+                    childImageSharp {
+                        gatsbyImageData
+                    }
                 }
             }
         }

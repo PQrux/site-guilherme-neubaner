@@ -17,7 +17,7 @@ const DrawerContainer = styled(animated.div)(() => ({
     right: '0',
     zIndex: 13,
     backdropFilter: 'blur(20px)',
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: 'rgba(0,0,0,0.9)',
     borderLeft: 'none',
     '&.open':{
         borderLeft: '0.5px rgba(255,255,255,0.2) solid',

@@ -13,11 +13,11 @@ export default function Seo(props: {children: any, data: {locales: {edges: {node
             <meta name="description" content={common.sitedescription} />
             <meta name="image" content={Icon} />
             <link rel="icon" href={Icon} />
-            <link rel="author" href="humans.txt" />
+            <link rel="author" href="/humans.txt" />
             <meta name="theme-color" content="#000000" />
-            <link rel="apple-touch-icon" href="shortcut.png" />
-            <link rel="shortcut icon" href="shortcut.png" />
-            <script type="module" src="analytics.js"></script>
+            <link rel="apple-touch-icon" href="/shortcut.png" />
+            <link rel="shortcut icon" href="/shortcut.png" />
+            <script type="module" src="/analytics.js"></script>
             {props.children}
         </Fragment>
     )
