@@ -71,7 +71,7 @@ export default function Home(props: {bgcolor: ColorType}){
                     </AutoSpring>
                 </div>
                 <ChipContainer>
-                    {contactMethods.map((method, i) => (
+                    {contactMethods.filter(m => contactLabels[m.key]).map((method, i) => (
                         <AutoSpring 
                             component={Button} 
                             variant="outlined" 

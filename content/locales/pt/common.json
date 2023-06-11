@@ -24,16 +24,6 @@
             "label": "GitHub",
             "prettyValue": "github.com/pqrux",
             "url": "https://github.com/pqrux"
-        },
-        "whatsapp": {
-            "label": "WhatsApp",
-            "prettyValue": "(31) 9 7192-7278",
-            "url": "https://wa.me/5531971927278"
-        },
-        "phone": {
-            "label": "Telefone",
-            "prettyValue": "(31) 9 7192-7278",
-            "url": "tel:+5531971927278"
         }
     }
 }

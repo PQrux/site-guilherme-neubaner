@@ -33,8 +33,8 @@ export default function About(props: {bgcolor: ColorType}){
 
     return (
         <Container bgcolor={props.bgcolor} fullHeight>
-            <Flex direction={tablet ? 'row' : 'column'} gap="10px" justify="space-between">
-                <Flex direction="column" style={{maxWidth: 650}}>
+            <Flex direction={laptop ? 'row' : 'column'} gap="30px" justify="space-between">
+                <Flex direction="column">
                     <Title>
                         <RichTrans ns="about" i18nKey="title"/>
                     </Title>

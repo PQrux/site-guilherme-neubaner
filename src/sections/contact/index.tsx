@@ -30,7 +30,7 @@ export default function Contact(props: {bgcolor: ColorType}){
                 <RichTrans ns="contact" i18nKey="description"/>
             </Text>
             <Flex style={{padding: '50px 0px'}} gap="50px" justify="space-between" wrap="wrap">
-                {contactMethods.map(c => (
+                {contactMethods.filter(c => socialMedia[c.key]).map(c => (
                     <InfoItem
                         key={c.key}
                         icon={<Icon size="large" color="primary">{c.icon}</Icon>}
