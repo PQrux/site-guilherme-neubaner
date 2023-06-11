@@ -34,7 +34,6 @@ const Touchable = styled.div<TouchableProps>(({theme, ...props}) => {
         padding: props.size === 'small' ? '2px 4px' : '5px 10px',
         borderRadius: TOUCHABLE_CONSTS.borderRadius,
         textDecoration: 'none',
-        //flex: 1,
         display: 'flex',
         justifyContent: 'center',
         color: outlined ? color : theme.colors.text,

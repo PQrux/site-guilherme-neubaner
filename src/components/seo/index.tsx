@@ -1,5 +1,4 @@
 import { Fragment, useMemo } from "react";
-import Icon from "../../assets/icon2.png";
 
 export default function Seo(props: {children: any, data: {locales: {edges: {node: {ns: string, data: string}}[]}}}){
     const common = useMemo(() => {
@@ -11,8 +10,8 @@ export default function Seo(props: {children: any, data: {locales: {edges: {node
         <Fragment>
             <title>{common.sitename}</title>
             <meta name="description" content={common.sitedescription} />
-            <meta name="image" content={Icon} />
-            <link rel="icon" href={Icon} />
+            <meta name="image" content="/shortcut.png" />
+            <link rel="icon" href="/favicon.ico" />
             <link rel="author" href="/humans.txt" />
             <meta name="theme-color" content="#000000" />
             <link rel="apple-touch-icon" href="/shortcut.png" />

@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useDynamicImg } from "../../contexts/dynamic_img";
 import useBreakpoints from "../../utils/use_breakpoints";
 import Container, { ContainerProps } from "../container";
-import { DynamicImgContext } from "../dynamic_img/context";
 
 const ImageContainer = styled.div<{bgImg: string}>(({theme, bgImg}) => ({
     backgroundColor: theme.colors.bgPrimary,
@@ -20,7 +20,7 @@ const Filter = styled(Container)(({
 }))
 
 export default function BackgroundCarousel(props: ContainerProps){
-    const ctx = useContext(DynamicImgContext);
+    const ctx = useDynamicImg();
     const tablet = useBreakpoints('tablet');
     const images = useMemo(() => ctx.allFile.nodes.filter(img => img.relativePath.split('/')[0] === 'home_carousel'), []);
     const [current, setCurrent] = useState(0);

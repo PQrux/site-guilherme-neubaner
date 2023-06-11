@@ -1,6 +1,5 @@
 import { GatsbyImageProps } from "gatsby-plugin-image";
-import { useContext } from "react";
-import { DynamicImgContext } from "./context";
+import { useDynamicImg } from "../../contexts/dynamic_img";
 
 
 export interface DynamicImgProps extends Omit<GatsbyImageProps, 'image'|'alt'>{
@@ -10,7 +9,7 @@ export interface DynamicImgProps extends Omit<GatsbyImageProps, 'image'|'alt'>{
 }
 
 export function DynamicImg(props: DynamicImgProps){
-    const context = useContext(DynamicImgContext);
+    const context = useDynamicImg();
     const file = context.allFile.nodes.find(f => f.relativePath === props.src);
 
     if(file?.childImageSharp){
