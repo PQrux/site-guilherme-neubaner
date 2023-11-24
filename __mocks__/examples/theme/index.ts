@@ -1,4 +1,4 @@
-import { Theme } from "@emotion/react"
+import { Theme } from "@emotion/react";
 import makeQuery from "../../../src/utils/make_query";
 
 const brk = {
@@ -18,7 +18,7 @@ const ExampleTheme: Theme = {
         error: '#FF0000',
         bgPrimary: '#000',
         bgSecondary: '#101010',
-        bgCard: 'rgba(255,255,255,0.1)'
+        bgDrawer: 'rgba(255,255,255,0.1)'
     },
     breakpoints: {
         mobile: brk.mobile,

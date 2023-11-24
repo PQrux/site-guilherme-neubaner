@@ -11,6 +11,7 @@ const Wrapper = styled.div<ContainerProps>(({bgcolor, fullHeight, theme}) => ({
     minHeight: fullHeight ? '100vh' : undefined,
     //@ts-ignore
     backgroundColor: bgcolor in theme.colors ? theme.colors[bgcolor] : bgcolor,
+    transition: 'background-color 0.4s',
 }));
 
 const _Container = styled.div(({theme}) => ({

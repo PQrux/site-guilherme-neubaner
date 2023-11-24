@@ -2,6 +2,7 @@ import { Theme } from "@emotion/react";
 import breakpoints from "../configs/breakpoints";
 
 const DarkTheme: Theme = {
+    id: 'dark',
     fontFamily: 'Inter',
     colors: {
         primary: '#0085FF',
@@ -11,7 +12,8 @@ const DarkTheme: Theme = {
         error: '#FF0000',
         bgPrimary: '#000',
         bgSecondary: '#101010',
-        bgCard: 'rgba(255,255,255,0.1)'
+        bgDrawer: 'rgba(0,0,0,0.9)',
+        bgCarouselFilter: 'blur(2px) brightness(0.3) grayscale(1)'
     },
     breakpoints,
 }

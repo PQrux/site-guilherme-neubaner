@@ -2,6 +2,7 @@ import { css, Global, useTheme } from "@emotion/react";
 
 export default function GlobalStyles(){
     const theme = useTheme();
+    const thumbColor = theme.id === 'light' ? '0, 0, 0' : '255, 255, 255';
     return <Global styles={css({
         'html': {
             scrollBehavior: 'smooth',
@@ -11,7 +12,7 @@ export default function GlobalStyles(){
             margin: 0,
             backgroundColor: theme.colors.bgPrimary,
             color: theme.colors.text,
-            
+            transition: 'background-color 0.4s',
         },
         '*': {
             boxSizing: 'border-box',
@@ -23,9 +24,11 @@ export default function GlobalStyles(){
         },
         '::-webkit-scrollbar-track':{background: "transparent"},
         '::-webkit-scrollbar-thumb':{
-            background: "rgba(255, 255, 255, .3)",
+            background: `rgba(${thumbColor}, .3)`,
             borderRadius: "5px"
         },
-        '::-webkit-scrollbar-thumb:hover':{background: "rgba(255, 255, 255, .5)"},
+        '::-webkit-scrollbar-thumb:hover':{
+            background: `rgba(${thumbColor}, .5)`
+        },
     })}/>
 }

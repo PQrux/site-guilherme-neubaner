@@ -12,11 +12,12 @@ const ImageContainer = styled.div<{bgImg: string}>(({theme, bgImg}) => ({
     backgroundRepeat: 'no-repeat',
 }));
 
-const Filter = styled(Container)(({
+const Filter = styled(Container)(({theme}) => ({
     height: 'inherit',
     width: 'inherit',
     flex: 1,
-    backdropFilter: 'blur(2px) brightness(0.3) grayscale(1)'
+    backdropFilter: theme.colors.bgCarouselFilter,
+    transition: 'backdrop-filter 0.4s',
 }))
 
 export default function BackgroundCarousel(props: ContainerProps){
