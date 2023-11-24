@@ -9,6 +9,7 @@ const brk = {
 }
 
 const ExampleTheme: Theme = {
+    id: 'dark',
     fontFamily: 'Arial',
     colors: {
         primary: '#0085FF',
@@ -18,7 +19,8 @@ const ExampleTheme: Theme = {
         error: '#FF0000',
         bgPrimary: '#000',
         bgSecondary: '#101010',
-        bgDrawer: 'rgba(255,255,255,0.1)'
+        bgDrawer: 'rgba(255,255,255,0.1)',
+        bgCarouselFilter: 'blur(1px)'
     },
     breakpoints: {
         mobile: brk.mobile,
