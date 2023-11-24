@@ -116,16 +116,6 @@
       "description": "Library for generating the brazilian PIX Copy/Paste and QR Code."
     },
     {
-      "name": "Liquid ODM",
-      "image": "liquid-odm-logo.svg",
-      "stack": [
-        "Open Source",
-        "Library",
-        "Typescript"
-      ],
-      "description": "Generic ODM for NoSQL database, mainly focused on the technologies proposed by the firebase project such as Realtime Database and Cloud Firestore."
-    },
-    {
       "name": "Minha Palestra",
       "image": "minha-palestra-logo.png",
       "stack": [

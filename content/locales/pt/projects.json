@@ -116,16 +116,6 @@
       "description": "Biblioteca para a geração de PIX Copia/Cola e QR Code."
     },
     {
-      "name": "Liquid ODM",
-      "image": "liquid-odm-logo.svg",
-      "stack": [
-        "Open Source",
-        "Library",
-        "Typescript"
-      ],
-      "description": "ODM genérico para base de dados NoSQL, focado principalmente nas tecnologias propostas pelo projeto firebase como Realtime Database e Cloud Firestore."
-    },
-    {
       "name": "Minha Palestra",
       "image": "minha-palestra-logo.png",
       "stack": [
