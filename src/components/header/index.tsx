@@ -11,6 +11,7 @@ import Drawer from "../drawer";
 import Flex from "../flex";
 import Icon from "../icon";
 import Link from "../link";
+import ThemeSwitch from "../theme_switch";
 
 
 const HeaderLogo = styled(Logo, {shouldForwardProp: p => p !== 'atTop' })<{atTop: boolean}>(({atTop}) => ({
@@ -55,7 +56,7 @@ export default function Header(){
 
     const close = () => setOpen(false);
 
-    const springs = useTrail(sections.length, {
+    const springs = useTrail(sections.length + 1, {
         opacity: loading.loaded ? 1 : 0,
         x: loading.loaded ? 0 : -20,
         delay: 2000,
@@ -68,8 +69,11 @@ export default function Header(){
                 <HeaderLogo atTop={atTop}/>
                 {laptop === true ? (
                     <Flex gap="20px">
+                        <AutoSpring style={springs[0]}>
+                            <ThemeSwitch/>
+                        </AutoSpring>
                         {sections.map((item, i) => (
-                            <AutoSpring style={springs[i]} key={item.to}>
+                            <AutoSpring style={springs[i+1]} key={item.to}>
                                 <Link to={item.to} color="primary" key={item.to}>
                                     {item.label}
                                 </Link>
@@ -77,9 +81,12 @@ export default function Header(){
                         ))}
                     </Flex>
                 ) : laptop === false ? (
-                    <Icon color="primary" onClick={() => setOpen(true)}>
-                        <MdMenu/>
-                    </Icon>
+                    <Flex gap="20px">
+                        <ThemeSwitch/>
+                        <Icon color="primary" onClick={() => setOpen(true)}>
+                            <MdMenu/>
+                        </Icon>
+                    </Flex>
                 ) : null}
             </Container>
             <Drawer onClose={close} open={openDrawer}/>

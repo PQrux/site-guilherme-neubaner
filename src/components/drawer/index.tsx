@@ -9,7 +9,7 @@ import Icon from "../icon";
 import Link from "../link";
 import Text from "../text";
 
-const DrawerContainer = styled(animated.div)<{open: boolean}>(({open}) => ({
+const DrawerContainer = styled(animated.div)<{open: boolean}>(({open, theme}) => ({
     position: 'fixed',
     height: '100%', 
     width: '0%',
@@ -17,7 +17,7 @@ const DrawerContainer = styled(animated.div)<{open: boolean}>(({open}) => ({
     right: '0',
     zIndex: 13,
     backdropFilter: 'blur(20px)',
-    backgroundColor: 'rgba(0,0,0,0.9)',
+    backgroundColor: theme.colors.bgDrawer,
     borderLeft: open ? '0.5px rgba(255,255,255,0.2) solid' : 'none',
     '& > *': {
         display: open ? 'block' : 'none',

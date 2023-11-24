@@ -23,8 +23,15 @@ export default function Projects(props: {bgcolor: ColorType}){
 
     const projects = useTranslation('projects');
 
-    const projectList: {name: string, description: string, image: string, stack: string[], properties: {label: string, value: string}[]}[] = projects.t<any,any>('list');
-
+    const projectList: {
+        name: string, 
+        description: string, 
+        image: string, 
+        stack: string[], 
+        properties: {label: string, value: string}[],
+        links: {label: string, url: string}[],
+    }[] = projects.t<any,any>('list');
+    
     return (
         <Container bgcolor={props.bgcolor} fullHeight>
             <Title>
@@ -41,6 +48,7 @@ export default function Projects(props: {bgcolor: ColorType}){
                         description={p.description}
                         stack={p.stack}
                         properties={p.properties}
+                        links={p.links}
                         image={<DynamicImg width="auto" src={p.image} alt={p.name}/>}
                     />
                 ))}

@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
+import { IoMdOpen } from "react-icons/io";
 import Chip from "../chip";
 import Flex from "../flex";
+import Icon from "../icon";
+import Link from "../link";
 import Text from "../text";
 
 const Container = styled(Flex)(() => ({
@@ -11,6 +14,7 @@ const Container = styled(Flex)(() => ({
     gap: '5px',
     padding: '10px',
     borderRadius: '5px',
+    justifyContent: 'space-between'
 }));
 
 const ImageContainer = styled.div({
@@ -31,6 +35,7 @@ export interface ProjectItemProps{
     image: JSX.Element;
     description: string;
     properties?: {label: string, value: string}[];
+    links?: {label: string, url: string}[];
 }
 
 export default function ProjectItem(props: ProjectItemProps){
@@ -66,6 +71,16 @@ export default function ProjectItem(props: ProjectItemProps){
                             {p.label}
                         </Text>
                     </Flex>
+                ))}
+            </Flex>
+            <Flex align="center" justify="space-evenly">
+                {props.links?.map(l => (
+                    <Link to={l.url} target="blank" color="primary">
+                        <Flex align="center">
+                            <Icon><IoMdOpen/></Icon>
+                            <Text color="inherit">{l.label}</Text>
+                        </Flex>
+                    </Link>
                 ))}
             </Flex>
         </Container>

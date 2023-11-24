@@ -13,7 +13,8 @@ declare global{
         subText: string;
         bgPrimary: string;
         bgSecondary: string;
-        bgCard: string;
+        bgDrawer: string;
+        bgCarouselFilter: string;
     }
     export interface ThemeConfig extends ThemeColors{
       contrastThreshold: number;
@@ -41,6 +42,7 @@ declare global{
 
 declare module '@emotion/react' {
   export interface Theme{
+    id: string;
     fontFamily: string;
     colors: ThemeConfig;
     breakpoints: Breakpoints;

@@ -3,6 +3,35 @@
   "description": "Conheça alguns dos projetos em que eu participei.",
   "list": [
     {
+      "name": "S2 Photobook",
+      "image": "s2-photobook-logo.svg",
+      "stack": [
+        "ReactJS",
+        "Firebase"
+      ],
+      "description": "Álbum em tempo real e público para eventos sociais como casamentos e aniversários.",
+      "properties": [
+        {
+          "label": "Desenvolvimento",
+          "value": "2 semanas"
+        },
+        {
+          "label": "Custo Anual",
+          "value": "R$ 0,00"
+        },
+        {
+          "label": "Usuários",
+          "value": "~100/Evento"
+        }
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "url": "http://s2photobook-demo.web.app/"
+        }
+      ]
+    },
+    {
       "name": "Super DASChecker",
       "image": "superdaschecker-logo.png",
       "stack": [
@@ -19,27 +48,6 @@
         {
           "label": "Receita Anual Aprox.",
           "value": "$ 100.000,00"
-        }
-      ]
-    },
-    {
-      "name": "iONO App",
-      "image": "iono-logo.png",
-      "stack": [
-        "ReactJS",
-        "React Native",
-        "NodeJS",
-        "Firebase"
-      ],
-      "description": "Solução White-label para associações veículares com sistema de gestão e aplicativo de autocontratação, controle e indicação para associados.",
-      "properties": [
-        {
-          "label": "Custo Anual",
-          "value": "R$ 150,00"
-        },
-        {
-          "label": "Usuários",
-          "value": "2000/dia"
         }
       ]
     },
@@ -64,25 +72,23 @@
       ]
     },
     {
-      "name": "S2 Photobook",
-      "image": "s2-photobook-logo.svg",
+      "name": "iONO App",
+      "image": "iono-logo.png",
       "stack": [
         "ReactJS",
+        "React Native",
+        "NodeJS",
         "Firebase"
       ],
-      "description": "Álbum em tempo real e público para eventos sociais como casamentos e aniversários.",
+      "description": "Solução White-label para associações veículares com sistema de gestão e aplicativo de autocontratação, controle e indicação para associados.",
       "properties": [
         {
-          "label": "Desenvolvimento",
-          "value": "2 semanas"
-        },
-        {
           "label": "Custo Anual",
-          "value": "R$ 0,00"
+          "value": "R$ 150,00"
         },
         {
           "label": "Usuários",
-          "value": "~100/Evento"
+          "value": "2000/dia"
         }
       ]
     },
@@ -113,17 +119,17 @@
         "Library",
         "Typescript"
       ],
-      "description": "Biblioteca para a geração de PIX Copia/Cola e QR Code."
-    },
-    {
-      "name": "Liquid ODM",
-      "image": "liquid-odm-logo.svg",
-      "stack": [
-        "Open Source",
-        "Library",
-        "Typescript"
-      ],
-      "description": "ODM genérico para base de dados NoSQL, focado principalmente nas tecnologias propostas pelo projeto firebase como Realtime Database e Cloud Firestore."
+      "description": "Biblioteca para a geração de PIX Copia/Cola e QR Code.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/PQrux/simple-pix"
+        },
+        {
+          "label": "NPM",
+          "url": "https://www.npmjs.com/package/@pqrux/simple-pix"
+        }
+      ]
     },
     {
       "name": "Minha Palestra",
@@ -133,7 +139,17 @@
         "ReactJS",
         "Firebase"
       ],
-      "description": "Sistema/PWA completo para gestão de palestras academicas, com gestão de participantes, visualização de fotos, emissão de certificado."
+      "description": "Sistema/PWA completo para gestão de palestras academicas, com gestão de participantes, visualização de fotos, emissão de certificado.",
+      "links": [
+        {
+          "label": "Demo",
+          "url": "https://minhapalestra.web.app/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/PQrux/minha-palestra"
+        }
+      ]
     }
   ]
 }

@@ -3,6 +3,35 @@
   "description": "Check out some of the projects I've worked at.",
   "list": [
     {
+      "name": "S2 Photobook",
+      "image": "s2-photobook-logo.svg",
+      "stack": [
+        "ReactJS",
+        "Firebase"
+      ],
+      "description": "Public real-time photo album for social events like weddings and birthdays.",
+      "properties": [
+        {
+          "label": "Development",
+          "value": "2 weeks"
+        },
+        {
+          "label": "Yearly Cost",
+          "value": "$ 0.00"
+        },
+        {
+          "label": "Users",
+          "value": "~100/event"
+        }
+      ],
+      "links": [
+        {
+          "label": "Demo",
+          "url": "http://s2photobook-demo.web.app/"
+        }
+      ]
+    },
+    {
       "name": "Super DASChecker",
       "image": "superdaschecker-logo.png",
       "stack": [
@@ -19,27 +48,6 @@
         {
           "label": "Aprox. Yearly Revenue",
           "value": "$ 24,000.00"
-        }
-      ]
-    },
-    {
-      "name": "iONO App",
-      "image": "iono-logo.png",
-      "stack": [
-        "ReactJS",
-        "React Native",
-        "NodeJS",
-        "Firebase"
-      ],
-      "description": "White-label solution for car insurance companies with a management system and application for auto-subscription, controlling and referring clients.",
-      "properties": [
-        {
-          "label": "Yearly Cost",
-          "value": "$ 30,00"
-        },
-        {
-          "label": "Users",
-          "value": "2000/day"
         }
       ]
     },
@@ -64,25 +72,23 @@
       ]
     },
     {
-      "name": "S2 Photobook",
-      "image": "s2-photobook-logo.svg",
+      "name": "iONO App",
+      "image": "iono-logo.png",
       "stack": [
         "ReactJS",
+        "React Native",
+        "NodeJS",
         "Firebase"
       ],
-      "description": "Public real-time photo album for social events like weddings and birthdays.",
+      "description": "White-label solution for car insurance companies with a management system and application for auto-subscription, controlling and referring clients.",
       "properties": [
         {
-          "label": "Development",
-          "value": "2 weeks"
-        },
-        {
           "label": "Yearly Cost",
-          "value": "$ 0.00"
+          "value": "$ 30,00"
         },
         {
           "label": "Users",
-          "value": "~100/event"
+          "value": "2000/day"
         }
       ]
     },
@@ -113,17 +119,17 @@
         "Library",
         "Typescript"
       ],
-      "description": "Library for generating the brazilian PIX Copy/Paste and QR Code."
-    },
-    {
-      "name": "Liquid ODM",
-      "image": "liquid-odm-logo.svg",
-      "stack": [
-        "Open Source",
-        "Library",
-        "Typescript"
-      ],
-      "description": "Generic ODM for NoSQL database, mainly focused on the technologies proposed by the firebase project such as Realtime Database and Cloud Firestore."
+      "description": "Library for generating the brazilian PIX Copy/Paste and QR Code.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/PQrux/simple-pix"
+        },
+        {
+          "label": "NPM",
+          "url": "https://www.npmjs.com/package/@pqrux/simple-pix"
+        }
+      ]
     },
     {
       "name": "Minha Palestra",
@@ -133,7 +139,17 @@
         "ReactJS",
         "Firebase"
       ],
-      "description": "Complete PWA system for managing academic lectures, with participant management, photo viewing and certificate issuance."
+      "description": "Complete PWA system for managing academic lectures, with participant management, photo viewing and certificate issuance.",
+      "links": [
+        {
+          "label": "Demo",
+          "url": "https://minhapalestra.web.app/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/PQrux/minha-palestra"
+        }
+      ]
     }
   ]
 }
