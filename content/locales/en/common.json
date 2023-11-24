@@ -25,6 +25,10 @@
             "label": "GitHub",
             "prettyValue": "github.com/pqrux",
             "url": "https://github.com/pqrux"
+        },
+        "cv": {
+            "label": "Resume",
+            "url": "/CV_EN-US.pdf"
         }
     }
 }

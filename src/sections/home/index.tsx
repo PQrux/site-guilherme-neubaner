@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useTrail } from "@react-spring/web";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import { IoIosMail, IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp } from "react-icons/io";
+import { IoIosMail, IoLogoGithub, IoLogoLinkedin, IoLogoWhatsapp, IoMdDownload } from "react-icons/io";
 import _AnimatedLogo from "../../assets/animated_logo";
 import AnimatedMouse from "../../assets/animated_mouse";
 import AutoSpring from "../../components/auto_spring";
@@ -40,6 +40,7 @@ const contactMethods = [
     {key: 'linkedin', color: '#0E76A8', icon: <IoLogoLinkedin/>},
     {key: 'whatsapp', color: '#25D366', icon: <IoLogoWhatsapp/>},
     {key: 'github', color: '#DBDBDB', icon: <IoLogoGithub/>},
+    {key: 'cv', color: '#00FF00', icon: <IoMdDownload/>},
 ];
 
 export default function Home(props: {bgcolor: ColorType}){
