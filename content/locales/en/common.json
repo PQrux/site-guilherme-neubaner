@@ -3,6 +3,7 @@
     "sitedescription": "I'm Guilherme Neubaner, a Full Cycle Developer!",
     "copyright": "All rights reserved.",
     "source_code_url": "https://github.com/PQrux/site-guilherme-neubaner",
+    "source_code_label": "View my source code 🙈❤️",
     "sections": [
         {"label": "HOME", "to": "#home"},
         {"label": "ABOUT ME", "to": "#about"},

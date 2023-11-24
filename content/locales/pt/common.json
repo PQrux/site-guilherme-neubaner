@@ -2,6 +2,8 @@
     "sitename": "Guilherme Neubaner - Desenvolvedor Full Cycle",
     "sitedescription": "Sou Guilherme Neubaner, um desenvolvedor Full Cycle! Será um prazer te conhecer.",
     "copyright": "Todos os direitos reservados.",
+    "source_code_url": "https://github.com/PQrux/site-guilherme-neubaner",
+    "source_code_label": "Ver meu código fonte 🙈❤️",
     "sections": [
         {"label": "INÍCIO", "to": "#home"},
         {"label": "SOBRE MIM", "to": "#about"},
