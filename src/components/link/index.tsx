@@ -8,6 +8,7 @@ export interface LinkComponentProps{
     to: string;
     children: any;
     ref?: any;
+    active?: boolean;
 }
 
 export interface LinkProps extends LinkComponentProps{
@@ -27,7 +28,7 @@ const LinkComponent = styled(_Link)<LinkComponentProps>(({theme, ...props}) => {
             height: "3px",
             backgroundColor: color,
             transition: 'width 0.5s',
-            width: '0px',
+            width: props.active ? '100%' : '0px',
         },
         '&:hover::after': {
             width: '100%',
