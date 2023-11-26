@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { ColorSwitcherContext } from "../../contexts/color_switcher_context";
 import { useThemeContext } from "../../contexts/theme_context";
+import isWindow from "../../utils/isWindow";
 
 export interface ColorSwitcherProps{
     delay?: number;
@@ -51,23 +52,23 @@ export default function ColorSwitcher(props: ColorSwitcherProps){
         }));
     }
 
-    const observer = useMemo(() => new IntersectionObserver(callback, {
+    const observer = useMemo(() => isWindow ? new IntersectionObserver(callback, {
         threshold: 1, 
         rootMargin: `0px 0px -${props.delay || '200'}px 0px`,
-    }), []);
+    }) : undefined, []);
     
     useEffect(() => {
-        return () => observer.disconnect();
+        return () => observer?.disconnect();
     }, []);
 
     const addItem = (element: Element, color: string) => {
         colorItems.current.push({element, color, init: false});
         colorItems.current = colorItems.current.sort((a,b) => a.element.getBoundingClientRect().y - b.element.getBoundingClientRect().y);
-        observer.observe(element);
+        observer?.observe(element);
     }
 
     const removeItem = (el: Element) => {
-        observer.unobserve(el);
+        observer?.unobserve(el);
         colorItems.current = colorItems.current.filter(({element}) => element !== el);
     }
 
