@@ -68,8 +68,10 @@ export default function ColorSwitcher(props: ColorSwitcherProps){
     }
 
     const removeItem = (el: Element) => {
-        observer?.unobserve(el);
-        colorItems.current = colorItems.current.filter(({element}) => element !== el);
+        if(el){
+            observer?.unobserve(el);
+            colorItems.current = colorItems.current.filter(({element}) => element !== el);
+        }
     }
 
     return (
