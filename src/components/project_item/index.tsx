@@ -74,8 +74,8 @@ export default function ProjectItem(props: ProjectItemProps){
                 ))}
             </Flex>
             <Flex align="center" justify="space-evenly">
-                {props.links?.map(l => (
-                    <Link to={l.url} target="blank" color="primary">
+                {props.links?.map((l, i) => (
+                    <Link to={l.url} target="blank" color="primary" key={i}>
                         <Flex align="center">
                             <Icon><IoMdOpen/></Icon>
                             <Text color="inherit">{l.label}</Text>

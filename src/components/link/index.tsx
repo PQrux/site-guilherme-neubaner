@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { GatsbyLinkProps, Link as _Link } from "gatsby";
+import { useMemo } from "react";
 import DefineDefaultColor from "../../utils/define_default_color";
 import Flex from "../flex";
 
@@ -11,11 +12,7 @@ export interface LinkComponentProps{
     active?: boolean;
 }
 
-export interface LinkProps extends LinkComponentProps{
-
-}
-
-const LinkComponent = styled(_Link)<LinkComponentProps>(({theme, ...props}) => {
+const LinkComponent = styled.a<LinkComponentProps>(({theme, ...props}) => {
     const color = DefineDefaultColor(theme, props.color);
     
     return {
@@ -27,7 +24,7 @@ const LinkComponent = styled(_Link)<LinkComponentProps>(({theme, ...props}) => {
             display: "block",
             height: "3px",
             backgroundColor: color,
-            transition: 'width 0.5s',
+            transition: `width 0.5s`,
             width: props.active ? '100%' : '0px',
         },
         '&:hover::after': {
@@ -36,10 +33,13 @@ const LinkComponent = styled(_Link)<LinkComponentProps>(({theme, ...props}) => {
     }
 })
 
-export default function Link(props: LinkProps & GatsbyLinkProps<any>){
+const regex = /^\/(?!\/)/;
+
+export default function Link(props: LinkComponentProps & GatsbyLinkProps<any>){
+    const isInternal = useMemo(() => regex.test(props.to), [props.to]);
     return (
         <Flex>
-            <LinkComponent {...props}>
+            <LinkComponent {...props} as={isInternal ? _Link : 'a'} href={isInternal ? undefined : props.to}>
                 {props.children}
             </LinkComponent>
         </Flex>

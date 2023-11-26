@@ -6,7 +6,6 @@ const ThemeContext = createContext<[theme: Theme, setTheme: Dispatch<SetStateAct
 
 export const ThemeContextProvider = (props: {theme?: Theme, children: any}) => {
     const [theme, setTheme] = useState(() => props.theme || GetUserPreferedTheme());
-    console.log(theme);
     useEffect(() => {
         if(props.theme) setTheme(props.theme);
     }, [props.theme]);
