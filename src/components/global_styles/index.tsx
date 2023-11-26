@@ -16,7 +16,13 @@ export default function GlobalStyles(){
         },
         '*': {
             boxSizing: 'border-box',
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+        },
+        'p, a, span, h1, h2, h3, em, u, b': {
+            transition: `color ${theme.colorTransition}`
+        },
+        'svg *': {
+            transition: `fill ${theme.colorTransition}, color ${theme.colorTransition}, stroke ${theme.colorTransition}`,
         },
         '::-webkit-scrollbar':{
             width: '10px',

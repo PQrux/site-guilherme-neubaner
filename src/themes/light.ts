@@ -15,7 +15,9 @@ const LightTheme: Theme = {
         bgDrawer: 'rgba(255,255,255,0.1)',
         bgCarouselFilter: 'blur(2px) contrast(60%) grayscale(1)'
     },
+    colorTransition: '500ms',
     breakpoints,
+    colorSwitches: ['#06b806', '#9a2cf5', '#e89a09'],
 }
 
 export default LightTheme;

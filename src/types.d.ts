@@ -46,5 +46,7 @@ declare module '@emotion/react' {
     fontFamily: string;
     colors: ThemeConfig;
     breakpoints: Breakpoints;
+    colorTransition: string;
+    colorSwitches: string[];
   }
 }

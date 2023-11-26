@@ -38,17 +38,19 @@ const Touchable = styled.div<TouchableProps>(({theme, ...props}) => {
         justifyContent: 'center',
         color: outlined ? color : theme.colors.text,
         backgroundColor: outlined ? 'transparent' : color,
-        transition: 'color 0.3s, background-color 0.3s, border-color 0.3s',
+        transition: `color ${theme.colorTransition}, background-color ${theme.colorTransition}, border-color ${theme.colorTransition}`,
         userSelect: 'none',
         '&:hover': {
             borderColor: lighter,
             color: outlined ? lighter : undefined,
             backgroundColor: outlined ? 'transparent' : lighter,
+            transition: `color 0.3s, background-color 0.3s, border-color 0.3s`
         },
         '&:active':{
             borderColor: darker,
             color: outlined ? darker : undefined,
             backgroundColor: outlined ? 'transparent' : darker,
+            transition: `color 0.3s, background-color 0.3s, border-color 0.3s`
         }
     })
 })

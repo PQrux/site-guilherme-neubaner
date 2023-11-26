@@ -24,7 +24,7 @@ const LinkComponent = styled.a<LinkComponentProps>(({theme, ...props}) => {
             display: "block",
             height: "3px",
             backgroundColor: color,
-            transition: `width 0.5s`,
+            transition: `width 0.5s, background-color ${theme.colorTransition}`,
             width: props.active ? '100%' : '0px',
         },
         '&:hover::after': {
